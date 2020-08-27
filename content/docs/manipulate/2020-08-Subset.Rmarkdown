@@ -1,0 +1,100 @@
+---
+title: "Subsetting data" 
+author: Damien Jourdain
+date: '2020-03-02'
+slug: subset
+output: 
+  bookdown::pdf_document2:
+    fig_caption: yes
+    toc: yes
+  bookdown::html_document2:
+    fig_caption: yes
+categories:
+  - R
+tags: []
+type: book
+weight: 2
+---
+
+# Learning objectives
+
+You will learn how to:
+
++ [Select a subset of rows](#subsetting-rows)
+  + [using their indices](#subsetting-rows-by-their-indices)
+  + [using logical criteria](#subsetting-rows-based-on-logical-criteria)
++ [Select then order rows](#chaining-data-treatments-subsetting-and-ordering)
++ [Select a subset of columns](#subsetting-columns)
++ [Select a subset of rows and columns](#subsetting-rows-and-columns)
+
+We will work with the fish data that we just imported from datasets.xlsx file
+
+```{r, echo=FALSE, warning=FALSE }
+library(readxl)
+library(tidyverse)
+fish <- read_excel("datasets.xlsx")
+```
+
+
+# Subsetting Rows
+
+To make things more apparent when we subset rows, I will add a fishID field that will be a unique integer per row.
+
+We can do this using the following command:
+```{r, echo=FALSE, warning=FALSE }
+fish$ID <- 1:nrow(fish)
+```
+
+We have several ways to subset rows.
+
+## Subsetting rows by their indices
+
+A first way to sub-set rows, is to indicate directly the list of rows you want to see. 
+
+```{r}
+# this will select the first five rows
+fish[1:5, ]
+```
+
+A more interesting application is the creation of a random subsample of cases (i.e., rows).
+To do this we can rely on the function `sample` as follows
+
+```{r}
+# first create a sample of row IDs using the function sample()
+rows_selected <- sample(1:nrow(fish), 10)
+
+# then create a new data frame containing only the randomly selected rows
+fish_sample <- fish[rows_selected, ]
+fish_sample
+```
+
+## Subsetting rows based on logical criteria
+
+Let say, you want to look only at fish species 'virginica'. To do this we will start to use the `dplyr` syntax.
+The command to subset rows is `filter()`
+
+```{r}
+virg <- filter(fish, Species=="virginica")
+head(virg)  #the function head selects the first 6 rows of a data frame
+```
+
+You can create a more complicated criteria, by using the logical operators. 
+
+In the following example, we are selecting virginica fishes with petal length greater than 6.
+
+```{r}
+virg6 <- filter(fish, Species=="virginica" & Petal.Length >=6)
+head(virg6,3)
+```
+
+## Chaining commands and the use of pipes
+
+A very convenient feature of tidyverse is the possibility of chaining different commands. The operator to chain the different command is the pipe `\%>\%`
+
+To understand how it works, we can reproduce the precedent example using the pipes syntax. 
+
+```{r}
+fish %>% filter(Species=="virginica" & Petal.Length >=6) %>% slice_head(n=3)
+```
+
+How did that work:

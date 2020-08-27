@@ -1,0 +1,59 @@
+---
+title: The data set
+author: Damien Jourdain
+date: '2020-08-20'
+slug: tidydataset
+output: 
+  bookdown::pdf_document2:
+    fig_caption: yes
+    toc: yes
+  bookdown::html_document2:
+    fig_caption: yes
+categories:
+  - R
+tags: []
+type: book
+weight: 2
+
+---
+
+In this chapter, we will work with the datasets made available by the tidyverse package. 
+
+If you haven't done it yet during the 'Import data' section of Chapter 2, download the file [datasets.xlsx here](/files/datasets.xlsx). Save it on your disk. 
+
+Load the readxl package to import data from excel files.
+```{r, warning=FALSE}
+library(readxl)
+```
+
+Then import the first worksheet of the datasets.xlsx file and save it in a tibble that we will name fish.
+
+```{r, eval=FALSE}
+fish <- read_excel("mypath/datasets.xlsx")
+```
+
+
+```{r, echo=FALSE, eval=TRUE}
+fish <- read_excel("datasets.xlsx")
+```
+
+If everyting went ok you should obtain this:
+```{r, echo=TRUE}
+fish
+```
+
+In the next sections we will rely a lot of the set of tidyverse packages. 
+
+If you haven't yet done so, install the package tidyverse. Remember you only have to do this once.
+```{r, eval=FALSE}
+install.packages("tidyverse")
+```
+
+Load the tidyverse set of packages. 
+```{r, warning=FALSE}
+library(tidyverse)
+```
+You will notice that you have in fact installed a set of packages like tibble. 
+
+
+We are ready to work on the data.

@@ -137,7 +137,7 @@ str(ans_df) ## ans_df is now a native R data.frame
 ## Importing data from an Excel file
 
 Again several solutions are available. For this course, we suggest to use the 
-readxl package. readxl supports both the .xls and .xlsx format. 
+readxl package. `readxl` supports both the .xls and .xlsx format. 
 
 As usual, if you haven't done so, you first need to install it on your computer:
 
@@ -162,11 +162,6 @@ You can do this with any excel file you have on your computer. Here we will use 
 data <- read_excel("mypath/datasets.xlsx")
 ```
 
-
-```r
-data <- read_excel("datasets.xlsx")
-data
-```
 
 ```
 ## # A tibble: 150 x 5
