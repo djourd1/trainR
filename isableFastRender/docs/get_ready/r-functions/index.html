@@ -1,0 +1,1003 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learning objectives Once you define variables, a data analysis process can usually be described as a series of functions applied to the data. A function is a set of statements organized together to perform a specific task.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="//localhost:1313/docs/get_ready/r-functions/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="//localhost:1313/docs/get_ready/r-functions/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Learning R">
+  <meta property="og:url" content="//localhost:1313/docs/get_ready/r-functions/">
+  <meta property="og:title" content="R Functions | Learning R">
+  <meta property="og:description" content="Learning objectives Once you define variables, a data analysis process can usually be described as a series of functions applied to the data. A function is a set of statements organized together to perform a specific task."><meta property="og:image" content="//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png">
+  <meta property="twitter:image" content="//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-08-22T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-08-22T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>R Functions | Learning R</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_0x70_resize_lanczos_2.png" alt="Learning R"></a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_0x70_resize_lanczos_2.png" alt="Learning R"></a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/docs/"><span>Documentation</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/docs/">Docs</a></li>
+    
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/get_ready/"><i class="fas fa-book pr-1"></i>Getting Ready</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/get_ready/why-r/">Why R ?</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-motivation/">Tips for Learning R</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/install-r-on-windows/">Install R on Windows</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-objects/">R Objects</a></li>
+
+
+
+  <li class="active"><a href="/docs/get_ready/r-functions/">R Functions</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/install-r-studio/">Install R Studio</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/studio-interface/">Studio Interface</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-packages/">R Packages</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/data_structures/"><i class="fas fa-book pr-1"></i>Data Structures</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/data_structures/basic-data-types/">Basic Data Types</a></li>
+
+
+
+  <li class=""><a href="/docs/data_structures/vectors/">Vectors</a></li>
+
+
+
+  <li class=""><a href="/docs/data_structures/matrices/">Matrices</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#learning-objectives">Learning objectives</a></li>
+    <li><a href="#r-functions-log-as-an-example">R functions: <code>log()</code> as an example</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#use-the-help-system-to-understand-the-functions">Use the help system to understand the functions</a></li>
+    <li><a href="#some-arguments-are-optional">Some arguments are optional</a></li>
+    <li><a href="#operators-are-functions">Operators are functions</a></li>
+    <li><a href="#additional-resources">Additional resources</a></li>
+    <li><a href="#exercises">Exercises</a>
+      <ul>
+        <li><a href="#ex-1-what-are-these-functions-doing">Ex. 1: What are these functions doing?</a></li>
+        <li><a href="#ex-2-nested-functions">Ex. 2: Nested functions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>R Functions</h1>
+
+          <div class="article-style">
+            <h2 id="learning-objectives">Learning objectives</h2>
+<p>Once you define variables, a data analysis process can usually be described as a series of <strong>functions</strong> applied to the data. A function is a set of statements organized together to perform a specific task.</p>
+<p>R includes many predefined functions. We&rsquo;ve already encountered the <code>install-packages</code>, <code>library</code>, and <code>ls</code> functions. We have also used several operators to solve our credit problem. There are many more functions in the base R, and many more can be added through packages. Finally, in another section, you will see that you can create your own functions.</p>
+<p>In this section we will:</p>
+<ul>
+<li>Review some important information related to R predefined functions</li>
+<li>Show you how to learn about these functions</li>
+</ul>
+<h2 id="r-functions-log-as-an-example">R functions: <code>log()</code> as an example</h2>
+<h4 id="r-functions-use-parenteses">R functions use parenteses</h4>
+<p>In general, to evaluate a function, we need to use parentheses.
+Note what happens when we type the function <code>ls</code>  instead of <code>ls()</code>.</p>
+<pre><code class="language-r">ls
+</code></pre>
+<pre><code>##                                                                              
+## 1 function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+## 2     pattern, sorted = TRUE)                                                
+## 3 {                                                                          
+## 4     if (!missing(name)) {                                                  
+## 5         pos &lt;- tryCatch(name, error = function(e) e)
+</code></pre>
+<p>It doesn&rsquo;t evaluate the function but instead it shows us the code for <code>ls</code>.</p>
+<p>Now if we add the parentheses, the function is evaluated and you see the objects in the workspace.</p>
+<pre><code class="language-r">ls()
+</code></pre>
+<pre><code>## [1] &quot;a&quot;
+</code></pre>
+<h4 id="r-functions-usually-require-arguments">R functions usually require arguments</h4>
+<p>Unlike <code>ls</code>, which does not require any arguments, <em>most functions require at least one</em>. An argument is a R object, it can be a variable or other data structures, that the function will process before returning another R object.</p>
+<p>Here is an example of how we assign an object to the argument for the natural log function <code>log</code>. So if I type <code>log(8)</code>, 8 is the argument sent to the function for evaluation. I get in return the natural log of 8, i.e., 2.0794415.</p>
+<pre><code class="language-r">log(8)
+</code></pre>
+<pre><code>## [1] 2.079442
+</code></pre>
+<p>Functions can take stored variables as arguments. Let&rsquo;s define a variable <code>a</code> as <code>1</code>. So we can apply a function to a variable as well. Because <code>a</code> has been defined as <code>1</code>, then the <code>log(a)</code> is <code>0</code>.</p>
+<pre><code class="language-r">a &lt;- 1
+log(a)
+</code></pre>
+<pre><code>## [1] 0
+</code></pre>
+<h4 id="functions-can-be-nested">Functions can be nested</h4>
+<p>In R, functions can be <strong>nested</strong>. That is that you can call a function to get the argument that&rsquo;s going to be used by another function.</p>
+<p>For example, if we type the function <code>exp(1)</code> the function for exponential, we get the mathematical constant <code>e</code>, \(2.7182\)</p>
+<p>Because <code>exp()</code> is the inverse function of <code>log()</code>, if we compute the natural log of that number, we should get back \(1\). So note that if we type function <code>log()</code> and then inside that function we use the argument function <code>exp(a)</code>, we first evaluate the first function, <code>exp(a)</code>, and then we evaluate the second, and we get an answer of 1.</p>
+<pre><code class="language-r">log(exp(1))
+</code></pre>
+<pre><code>## [1] 1
+</code></pre>
+<p>The important thing to remember is that functions are evaluated <em>from the inside out when you nest them</em>.</p>
+<h2 id="use-the-help-system-to-understand-the-functions">Use the help system to understand the functions</h2>
+<p>You can learn about the function by using the help system. A very nice feature of R is that it documents its functions and that we can call help files.</p>
+<p>Help files are like user manuals for the functions. You can find:</p>
+<ul>
+<li>what the function expects: the arguments</li>
+<li>what it does (usually the help file will include some useful links and references)</li>
+<li>what it produces, i.e. what are the outputs of the function</li>
+</ul>
+<p>You get help by using the help function, or for most functions, you can use as a shorthand, which is the question mark followed by the function name.</p>
+<pre><code class="language-r">help(log)
+? log
+</code></pre>
+<p>Finally, many of the functions contains some example proposed by the developer. You can try out the worked out examples provided, by typing:</p>
+<pre><code class="language-r">example(log)   # show an example of function log
+</code></pre>
+<pre><code>## 
+## log&gt; log(exp(3))
+## [1] 3
+## 
+## log&gt; log10(1e7) # = 7
+## [1] 7
+## 
+## log&gt; x &lt;- 10^-(1+2*1:9)
+## 
+## log&gt; cbind(x, log(1+x), log1p(x), exp(x)-1, expm1(x))
+##           x                                                    
+##  [1,] 1e-03 9.995003e-04 9.995003e-04 1.000500e-03 1.000500e-03
+##  [2,] 1e-05 9.999950e-06 9.999950e-06 1.000005e-05 1.000005e-05
+##  [3,] 1e-07 1.000000e-07 1.000000e-07 1.000000e-07 1.000000e-07
+##  [4,] 1e-09 1.000000e-09 1.000000e-09 1.000000e-09 1.000000e-09
+##  [5,] 1e-11 1.000000e-11 1.000000e-11 1.000000e-11 1.000000e-11
+##  [6,] 1e-13 9.992007e-14 1.000000e-13 9.992007e-14 1.000000e-13
+##  [7,] 1e-15 1.110223e-15 1.000000e-15 1.110223e-15 1.000000e-15
+##  [8,] 1e-17 0.000000e+00 1.000000e-17 0.000000e+00 1.000000e-17
+##  [9,] 1e-19 0.000000e+00 1.000000e-19 0.000000e+00 1.000000e-19
+</code></pre>
+<p>Sometimes, the help system will not suffice to get it right. You can also browse the internet resources for some additional help. It is very likely that someone got the same issues than you before and solved it by requesting help on the available forums !</p>
+<h2 id="some-arguments-are-optional">Some arguments are optional</h2>
+<p>From looking at the help file for log you can see that the function log expects an <code>x</code>, a value, and it also expects <code>base</code>. However, some arguments are <strong>required</strong>, and others are <strong>optional</strong>.</p>
+<p>You can determine which arguments are optional by noting in the help document
+that a default value is assigned with the equal sign. For example, the base of the function log defaults to the base <code>exp(1)</code>. It&rsquo;s the natural log.</p>
+<p>If you already know how the function works but need a quick reminder of the arguments, you can use the args function.</p>
+<p>If I type args of log, it shows us the two arguments that it needs.</p>
+<pre><code class="language-r">args(log)
+</code></pre>
+<pre><code>## function (x, base = exp(1)) 
+## NULL
+</code></pre>
+<p>You can change the default value by simply assigning another value.
+For example, if instead of natural log we want to get log base 2, we would type, for example, log of 8, and now we change the default of base to 2.</p>
+<pre><code class="language-r">log(8, base=2)
+</code></pre>
+<pre><code>## [1] 3
+</code></pre>
+<p><strong>Note that to specify arguments, we use the equal sign. We did not use the assignment argument.</strong></p>
+<p>If we read the help file for log, we see that the first argument has a name, too.
+It&rsquo;s x. However, we haven&rsquo;t been using that argument name. We could, though.</p>
+<p>Here&rsquo;s how we would do it.</p>
+<pre><code class="language-r">log(x=8, base=2)
+</code></pre>
+<pre><code>## [1] 3
+</code></pre>
+<p>We get the same answer as if we hadn&rsquo;t used the name x.
+The above code works, but we can save ourselves some time, because if no argument name is used, R assumes you&rsquo;re entering arguments in the order shown in the help file or by args.</p>
+<p>So by not using the names, R assumes that the arguments are x, and then the next one is base.</p>
+<h2 id="operators-are-functions">Operators are functions</h2>
+<p>We said that functions need parentheses to be evaluated, but there are some exceptions.
+Among these, the most commonly used are the arithmetic and relational operators.</p>
+<p>For example, <code>2 ^ 3</code>, that function that takes 2 to the power of 3 doesn&rsquo;t need a parentheses. We just write it out as we would do in a mathematical formula.</p>
+<p>You can see the arithmetic operators by looking at the help file.</p>
+<pre><code class="language-r">help('+')
+</code></pre>
+<h2 id="additional-resources">Additional resources</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.statmethods.net/management/functions.html" target="_blank">At Quick-R</a></td>
+<td>Quick-R put up a useful selection of R functions</td>
+</tr>
+<tr>
+<td>
+<a href="../r-functions-used/">The functions we used</a></td>
+<td>Our list of functions that were used during the course, and a quick description</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercises">Exercises</h2>
+<h3 id="ex-1-what-are-these-functions-doing">Ex. 1: What are these functions doing?</h3>
+<p>Run the following code in the R console and guess what they are doing</p>
+<pre><code class="language-r">n &lt;- 1000
+x &lt;- seq(1,n)
+sum(x)
+</code></pre>
+<p>Possible Answers:</p>
+<ul>
+<li>sum creates a list of numbers and seq adds them up.</li>
+<li>seq creates a list of numbers and sum adds them up.</li>
+<li>seq computes the difference between two arguments and sum computes the + sum of 1 through 1000.</li>
+<li>sum always returns the same number</li>
+</ul>
+<p>Based on the result, what do you think the functions seq and sum do? You can use the help system.</p>
+<h3 id="ex-2-nested-functions">Ex. 2: Nested functions</h3>
+<p>Use one line of code to compute the log, to the base 10, of the square root of 100. Make sure your code includes the <code>log10()</code> and <code>sqrt()</code> functions.</p>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/docs/get_ready/r-objects/" rel="next">R Objects</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/docs/get_ready/r-scripts/" rel="prev">R Scripts</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Aug 22, 2020</p>
+
+          
+
+
+
+
+
+          
+
+
+          
+
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Website Builder</a>
+    
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

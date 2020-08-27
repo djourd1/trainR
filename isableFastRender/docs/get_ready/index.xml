@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 1: Getting Ready | Learning R</title>
+    <link>//localhost:1313/docs/get_ready/</link>
+      <atom:link href="//localhost:1313/docs/get_ready/index.xml" rel="self" type="application/rss+xml" />
+    <description>Chapter 1: Getting Ready</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png</url>
+      <title>Chapter 1: Getting Ready</title>
+      <link>//localhost:1313/docs/get_ready/</link>
+    </image>
+    
+    <item>
+      <title>Why R ?</title>
+      <link>//localhost:1313/docs/get_ready/why-r/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/why-r/</guid>
+      <description>&lt;p&gt;R is a programming language, but it is not a programming language like C or Java. It was not created by software engineers for software development. Instead, it was developed by statisticians and data analysts as an interactive environment for data analysis.&lt;/p&gt;
+&lt;p&gt;However, like in any other programming language,you can save your work in scripts, which you can easily execute at any moment. These scripts serve as a record of the analysis you performed, a key feature that facilitates reproducible work.&lt;/p&gt;
+&lt;p&gt;Other attractive features are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;R is free !&lt;/li&gt;
+&lt;li&gt;R is open source, meaning that you can look at the codes (especially the codes of the packages you will be using). So you will know exactly what you are doing !&lt;/li&gt;
+&lt;li&gt;R runs across all major platforms: Windows, Mac OS, Unix, Linux.&lt;/li&gt;
+&lt;li&gt;R has a large and active community of users. So there are numerous resources for learning and asking questions.&lt;/li&gt;
+&lt;li&gt;R makes it easy to build meaningful (and beautiful) plots from your data&lt;/li&gt;
+&lt;li&gt;R enables developers to share software implementations of new data science techniques in the form of &amp;ldquo;packages&amp;rdquo;, which are extensions to R. There is now thousands of these packages for many different fields available for immediate use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interactive data analysis occurs on the R console. In the R console, you can execute commands as you type them. There are several ways to gain access to a console but the simplest one is to download and install R, and then start it up on your computer.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips for Learning R</title>
+      <link>//localhost:1313/docs/get_ready/r-motivation/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/r-motivation/</guid>
+      <description>&lt;p&gt;If you’re reading this introduction, I suppose you are just at the beginning of your journey learning R programming and you’re looking for tips on how to progress.&lt;/p&gt;
+&lt;p&gt;Here is an interesting blog published recently that should inspire you as you learn R.
+You probably do not want to become a full blown data analyst, but the tips that are given are quite relevant for any person wanting to use R for econometrics.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com/top-tips-for-learning-r-from-africa-rs-shelmith-kariuki/&#34; target=&#34;_blank&#34;&gt; Kariuki Post&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install R on Windows</title>
+      <link>//localhost:1313/docs/get_ready/install-r-on-windows/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/install-r-on-windows/</guid>
+      <description>&lt;p&gt;We will concentrate on the installation on a &lt;strong&gt;Windows&lt;/strong&gt; operating system. &lt;em&gt;If you need to install it on a Mac, you can find a video at &lt;a href=&#34;https://youtu.be/GFImMj1lMRI&#34; target=&#34;_blank&#34;&gt;Install R and Rstudio on Mac&lt;/a&gt; that will help you&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For Windows operating system: click on the following link:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/bin/windows/base/&#34; target=&#34;_blank&#34;&gt;Install R for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You will be proposed to install the latest version of R that corresponds to your operating system (first link on top of the page as shown in Figure 1 ).&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-download-screen&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/cran-download.png&#34; data-caption=&#34;The download screen&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/cran-download.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    The download screen
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Feel free to explore that page. In particular, you may explore the link &amp;ldquo;Does R run under my version of Windows?&amp;rdquo; before starting the installation process.&lt;/p&gt;
+&lt;p&gt;When you are ready click the download link.&lt;/p&gt;
+&lt;p&gt;You will receive a message to save the file. Click on the &amp;ldquo;Save&amp;rdquo; button. Please note that this might take some time to download. Once the download is complete, open the file and run the programme. (I supposed that you know where and how to open the file that has just been saved. Since the way to operate is specific to your system, we do not give any special instructions here).&lt;/p&gt;
+&lt;p&gt;A setup wizard should appear. Follow the different steps: set-up your language, the directories where it will installed, etc. As a beginner, you are well advised to follow the default options proposed by the wizard! Until you reach the Finish step.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-security-warning-use-the-run-button&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r02.png&#34; data-caption=&#34;Security Warning: Use the Run button&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r02.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Security Warning: Use the Run button
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-select-language&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r03.png&#34; data-caption=&#34;Select Language&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r03.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Select Language
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-4&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r04.png&#34; data-caption=&#34;Wizard 4&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r04.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 4
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-5&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r05.png&#34; data-caption=&#34;Wizard 5&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r05.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 5
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-select-the-default-destination&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r06.png&#34; data-caption=&#34;Select the default destination&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r06.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Select the default destination
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-7&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r07.png&#34; data-caption=&#34;Wizard 7&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r07.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 7
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-8&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r08.png&#34; data-caption=&#34;Wizard 8&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r08.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 8
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-9&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r09.png&#34; data-caption=&#34;Wizard 9&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r09.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 9
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-10&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r10.png&#34; data-caption=&#34;Wizard 10&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r10.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 10
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-11&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r11.png&#34; data-caption=&#34;Wizard 11&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r11.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 11
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-12&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r12.png&#34; data-caption=&#34;Wizard 12&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r12.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 12
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;To check that everything went OK, you can open the R program. A R shortcut should now be present on your computer desktop screen.&lt;/p&gt;
+&lt;p&gt;Click on this new icon and you should see appearing the R console as in the Figure  13 :&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-r-console&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RConsole.jpg&#34; data-caption=&#34;R Console&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RConsole.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    R Console
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;You can type your first R command at the cursor. Type 1+1.Then type the &lt;code&gt;Enter&lt;/code&gt; key. Normally the console should create a new line that says &lt;code&gt;[1] 2&lt;/code&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-your-first-command&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RConsole2.jpg&#34; data-caption=&#34;Your first command&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RConsole2.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Your first command
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Congratulations R is up and running on your computer !&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Objects</title>
+      <link>//localhost:1313/docs/get_ready/r-objects/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/r-objects/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;In this section, you will learn to store &lt;em&gt;objects&lt;/em&gt; (think of variables, functions, datasets) into the &lt;em&gt;R workspace&lt;/em&gt; (think of a place where R stores all its objects) and use the stored objects to solve a question about repayments of loans.&lt;/p&gt;
+&lt;h2 id=&#34;r-objects-using-an-example&#34;&gt;R Objects using an example&lt;/h2&gt;
+&lt;p&gt;To do this we will use the R programme we have just installed. Launch the R program (for example, by clicking at the R icon present in your desktop).&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s start with objects and functions using a very simple example.&lt;/p&gt;
+&lt;p&gt;Suppose you want to know how much you will have to pay to the bank if you borrow an amount $ L $ and you intend to reimburse a fixed amount over a period of \(N\) months, and the bank intend to charge you an annual interest rate \(r\).&lt;/p&gt;
+&lt;p&gt;There are different ways to consider this problem, but today we will rely on the textbook formula to calculate this&lt;/p&gt;
+&lt;p&gt;$$ m = L . \frac{(\frac{r}{1200})(1 +\frac{r}{1200})^N}{(1+ \frac{r}{1200})^N -1 } $$&lt;/p&gt;
+&lt;p&gt;One advantage of programming language is that we can define variables and keep such expressions general. So, if we are asked to answer this question when borrowing 2000$ for 24 months at an interest of 6% per year, we can define \(L\) to be \(10000\), \(N\) to be \(24\), and \(r\) to be \(6\).&lt;/p&gt;
+&lt;p&gt;In R, we do that using the assignment symbol &lt;code&gt;&amp;lt;-&lt;/code&gt;, which is less than followed by a minus. Note that it looks like a little arrow. &lt;code&gt;L &amp;lt;- 10000&lt;/code&gt; means that &lt;strong&gt;you&amp;rsquo;re assigning the number 10000 to the variable named L&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Note: We coud also use &lt;code&gt;=&lt;/code&gt; the equals sign for assignment, but we recommend against it, because using it can cause confusion.&lt;/p&gt;
+&lt;p&gt;Try it out in your console.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;L &amp;lt;- 10000
+N &amp;lt;- 24
+r &amp;lt;- 6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that R does not print anything out when you make these assignments.&lt;/p&gt;
+&lt;p&gt;Had you made a mistake, you would have received an error message. For example, if you forgot the minus sign to make a complete arrow and get the assignment right, you will receive an error message. For example, try this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt; u &amp;lt; 24
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Error in eval(expr, envir, enclos): object &#39;u&#39; not found
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To see the value stored in \(L\), variable we simply type a in the console.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;L
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And when we hit the Return key, R shows us the value stored in \(L\), which is \(10000\).&lt;/p&gt;
+&lt;p&gt;As we define objects in the console, we are actually changing what is called the &lt;strong&gt;workspace&lt;/strong&gt;. You can see all the variables saved in your workspace by typing &lt;code&gt;ls()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ls&lt;/code&gt; is a predefined R &lt;strong&gt;function&lt;/strong&gt; that shows you the names of the objects saved in your workspace. By predefined, we mean that you can use them without having to load an additional package, or to define them by yourself.&lt;/p&gt;
+&lt;p&gt;Just type it in your console:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ls()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;L&amp;quot; &amp;quot;N&amp;quot; &amp;quot;r&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since the problem parameters are saved in variables, to obtain a solution, we can use the variables directly.&lt;/p&gt;
+&lt;p&gt;To be able to calculate the  formula, we will again rely on R predefined operators &lt;code&gt;/&lt;/code&gt; ,&lt;code&gt;^&lt;/code&gt; , and &lt;code&gt;*&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;L * (r/1200) *(1+r/1200)^N / ((1 + r/1200)^N - 1) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 443.2061
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that simply typing the formula with the variables gives you the solution, but does not store it into the workspace. If you want to use the solutions obtained for further calculations, you need to assign them to other variables.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;m &amp;lt;- L * (r/1200) *(1+r/1200)^N / ((1 + r/1200)^N - 1) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again the solutions are not printed out to your console, but they are stored in the workspace and ready to be used for further work.&lt;/p&gt;
+&lt;p&gt;As a small trick, if you want to store the value to the workspace and at the same time see the result on the console, you can surround your assignment with brackets:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(m &amp;lt;- L * (r/1200) *(1+r/1200)^N / ((1 + r/1200)^N - 1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 443.2061
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(extra &amp;lt;-  (m * N) - L )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 636.9465
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In any case, if you did things correctly you should get 443.2061025  to be paid per month, and paid an extra 636.9464607  to your banker to get access to that money immediately !&lt;/p&gt;
+&lt;p&gt;The Figure 1 shows how your console should look like at the end of this session if you followed all the instructions.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-how-you-console-should-look-like&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/FirstRConsole.jpg&#34; data-caption=&#34;How you console should look like&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/FirstRConsole.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    How you console should look like
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;additional-resources&#34;&gt;Additional resources&lt;/h2&gt;
+&lt;p&gt;There are many resources available over the internet. Here we suggest two specific pages of the Tutorialpoints website that are giving more details about the names of variables, and the predefined operators R.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.tutorialspoint.com/r/r_variables.htm&#34; target=&#34;_blank&#34;&gt;More on R variable names&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.tutorialspoint.com/r/r_operators.htm&#34; target=&#34;_blank&#34;&gt;More on R operators&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-1-play-with-variables&#34;&gt;Ex. 1: Play with variables&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create two new variables \(i\) and \(j\) and assign them the values 1 and 2 respectively&lt;/li&gt;
+&lt;li&gt;Create a new variable &lt;code&gt;sinij&lt;/code&gt;  that stores the value of sinus of the sum of i and j (tips: browse the internet to figure out how the sinus function is defined in base R)&lt;/li&gt;
+&lt;li&gt;Display the variable &lt;code&gt;sinij&lt;/code&gt; on your console&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ex-2--add-the-first-100-integers&#34;&gt;Ex. 2:  Add the first 100 integers.&lt;/h3&gt;
+&lt;p&gt;We know that the sum of the first \(n\) integers is given by the formula \(\frac{n (n+1)}{2}\)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a variable \(n\) and assign the value 10&lt;/li&gt;
+&lt;li&gt;Calculate the sum of the 10 first integers and store it in a variable &lt;code&gt;s10&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Calculate the sum of the 100 first integers&lt;/li&gt;
+&lt;li&gt;You can see that this exercise can be repetitive and it will be useful to develop a specific function that would avoid repetitions.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Functions</title>
+      <link>//localhost:1313/docs/get_ready/r-functions/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/r-functions/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;Once you define variables, a data analysis process can usually be described as a series of &lt;strong&gt;functions&lt;/strong&gt; applied to the data. A function is a set of statements organized together to perform a specific task.&lt;/p&gt;
+&lt;p&gt;R includes many predefined functions. We&amp;rsquo;ve already encountered the &lt;code&gt;install-packages&lt;/code&gt;, &lt;code&gt;library&lt;/code&gt;, and &lt;code&gt;ls&lt;/code&gt; functions. We have also used several operators to solve our credit problem. There are many more functions in the base R, and many more can be added through packages. Finally, in another section, you will see that you can create your own functions.&lt;/p&gt;
+&lt;p&gt;In this section we will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Review some important information related to R predefined functions&lt;/li&gt;
+&lt;li&gt;Show you how to learn about these functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;r-functions-log-as-an-example&#34;&gt;R functions: &lt;code&gt;log()&lt;/code&gt; as an example&lt;/h2&gt;
+&lt;h4 id=&#34;r-functions-use-parenteses&#34;&gt;R functions use parenteses&lt;/h4&gt;
+&lt;p&gt;In general, to evaluate a function, we need to use parentheses.
+Note what happens when we type the function &lt;code&gt;ls&lt;/code&gt;  instead of &lt;code&gt;ls()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                                                                              
+## 1 function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+## 2     pattern, sorted = TRUE)                                                
+## 3 {                                                                          
+## 4     if (!missing(name)) {                                                  
+## 5         pos &amp;lt;- tryCatch(name, error = function(e) e)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It doesn&amp;rsquo;t evaluate the function but instead it shows us the code for &lt;code&gt;ls&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now if we add the parentheses, the function is evaluated and you see the objects in the workspace.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ls()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;r-functions-usually-require-arguments&#34;&gt;R functions usually require arguments&lt;/h4&gt;
+&lt;p&gt;Unlike &lt;code&gt;ls&lt;/code&gt;, which does not require any arguments, &lt;em&gt;most functions require at least one&lt;/em&gt;. An argument is a R object, it can be a variable or other data structures, that the function will process before returning another R object.&lt;/p&gt;
+&lt;p&gt;Here is an example of how we assign an object to the argument for the natural log function &lt;code&gt;log&lt;/code&gt;. So if I type &lt;code&gt;log(8)&lt;/code&gt;, 8 is the argument sent to the function for evaluation. I get in return the natural log of 8, i.e., 2.0794415.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;log(8)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2.079442
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Functions can take stored variables as arguments. Let&amp;rsquo;s define a variable &lt;code&gt;a&lt;/code&gt; as &lt;code&gt;1&lt;/code&gt;. So we can apply a function to a variable as well. Because &lt;code&gt;a&lt;/code&gt; has been defined as &lt;code&gt;1&lt;/code&gt;, then the &lt;code&gt;log(a)&lt;/code&gt; is &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;a &amp;lt;- 1
+log(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;functions-can-be-nested&#34;&gt;Functions can be nested&lt;/h4&gt;
+&lt;p&gt;In R, functions can be &lt;strong&gt;nested&lt;/strong&gt;. That is that you can call a function to get the argument that&amp;rsquo;s going to be used by another function.&lt;/p&gt;
+&lt;p&gt;For example, if we type the function &lt;code&gt;exp(1)&lt;/code&gt; the function for exponential, we get the mathematical constant &lt;code&gt;e&lt;/code&gt;, \(2.7182\)&lt;/p&gt;
+&lt;p&gt;Because &lt;code&gt;exp()&lt;/code&gt; is the inverse function of &lt;code&gt;log()&lt;/code&gt;, if we compute the natural log of that number, we should get back \(1\). So note that if we type function &lt;code&gt;log()&lt;/code&gt; and then inside that function we use the argument function &lt;code&gt;exp(a)&lt;/code&gt;, we first evaluate the first function, &lt;code&gt;exp(a)&lt;/code&gt;, and then we evaluate the second, and we get an answer of 1.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;log(exp(1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The important thing to remember is that functions are evaluated &lt;em&gt;from the inside out when you nest them&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;use-the-help-system-to-understand-the-functions&#34;&gt;Use the help system to understand the functions&lt;/h2&gt;
+&lt;p&gt;You can learn about the function by using the help system. A very nice feature of R is that it documents its functions and that we can call help files.&lt;/p&gt;
+&lt;p&gt;Help files are like user manuals for the functions. You can find:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what the function expects: the arguments&lt;/li&gt;
+&lt;li&gt;what it does (usually the help file will include some useful links and references)&lt;/li&gt;
+&lt;li&gt;what it produces, i.e. what are the outputs of the function&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You get help by using the help function, or for most functions, you can use as a shorthand, which is the question mark followed by the function name.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;help(log)
+? log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, many of the functions contains some example proposed by the developer. You can try out the worked out examples provided, by typing:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;example(log)   # show an example of function log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## log&amp;gt; log(exp(3))
+## [1] 3
+## 
+## log&amp;gt; log10(1e7) # = 7
+## [1] 7
+## 
+## log&amp;gt; x &amp;lt;- 10^-(1+2*1:9)
+## 
+## log&amp;gt; cbind(x, log(1+x), log1p(x), exp(x)-1, expm1(x))
+##           x                                                    
+##  [1,] 1e-03 9.995003e-04 9.995003e-04 1.000500e-03 1.000500e-03
+##  [2,] 1e-05 9.999950e-06 9.999950e-06 1.000005e-05 1.000005e-05
+##  [3,] 1e-07 1.000000e-07 1.000000e-07 1.000000e-07 1.000000e-07
+##  [4,] 1e-09 1.000000e-09 1.000000e-09 1.000000e-09 1.000000e-09
+##  [5,] 1e-11 1.000000e-11 1.000000e-11 1.000000e-11 1.000000e-11
+##  [6,] 1e-13 9.992007e-14 1.000000e-13 9.992007e-14 1.000000e-13
+##  [7,] 1e-15 1.110223e-15 1.000000e-15 1.110223e-15 1.000000e-15
+##  [8,] 1e-17 0.000000e+00 1.000000e-17 0.000000e+00 1.000000e-17
+##  [9,] 1e-19 0.000000e+00 1.000000e-19 0.000000e+00 1.000000e-19
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sometimes, the help system will not suffice to get it right. You can also browse the internet resources for some additional help. It is very likely that someone got the same issues than you before and solved it by requesting help on the available forums !&lt;/p&gt;
+&lt;h2 id=&#34;some-arguments-are-optional&#34;&gt;Some arguments are optional&lt;/h2&gt;
+&lt;p&gt;From looking at the help file for log you can see that the function log expects an &lt;code&gt;x&lt;/code&gt;, a value, and it also expects &lt;code&gt;base&lt;/code&gt;. However, some arguments are &lt;strong&gt;required&lt;/strong&gt;, and others are &lt;strong&gt;optional&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You can determine which arguments are optional by noting in the help document
+that a default value is assigned with the equal sign. For example, the base of the function log defaults to the base &lt;code&gt;exp(1)&lt;/code&gt;. It&amp;rsquo;s the natural log.&lt;/p&gt;
+&lt;p&gt;If you already know how the function works but need a quick reminder of the arguments, you can use the args function.&lt;/p&gt;
+&lt;p&gt;If I type args of log, it shows us the two arguments that it needs.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;args(log)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## function (x, base = exp(1)) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can change the default value by simply assigning another value.
+For example, if instead of natural log we want to get log base 2, we would type, for example, log of 8, and now we change the default of base to 2.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;log(8, base=2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Note that to specify arguments, we use the equal sign. We did not use the assignment argument.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If we read the help file for log, we see that the first argument has a name, too.
+It&amp;rsquo;s x. However, we haven&amp;rsquo;t been using that argument name. We could, though.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how we would do it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;log(x=8, base=2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We get the same answer as if we hadn&amp;rsquo;t used the name x.
+The above code works, but we can save ourselves some time, because if no argument name is used, R assumes you&amp;rsquo;re entering arguments in the order shown in the help file or by args.&lt;/p&gt;
+&lt;p&gt;So by not using the names, R assumes that the arguments are x, and then the next one is base.&lt;/p&gt;
+&lt;h2 id=&#34;operators-are-functions&#34;&gt;Operators are functions&lt;/h2&gt;
+&lt;p&gt;We said that functions need parentheses to be evaluated, but there are some exceptions.
+Among these, the most commonly used are the arithmetic and relational operators.&lt;/p&gt;
+&lt;p&gt;For example, &lt;code&gt;2 ^ 3&lt;/code&gt;, that function that takes 2 to the power of 3 doesn&amp;rsquo;t need a parentheses. We just write it out as we would do in a mathematical formula.&lt;/p&gt;
+&lt;p&gt;You can see the arithmetic operators by looking at the help file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;help(&#39;+&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;additional-resources&#34;&gt;Additional resources&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.statmethods.net/management/functions.html&#34; target=&#34;_blank&#34;&gt;At Quick-R&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Quick-R put up a useful selection of R functions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;../r-functions-used/&#34;&gt;The functions we used&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Our list of functions that were used during the course, and a quick description&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-1-what-are-these-functions-doing&#34;&gt;Ex. 1: What are these functions doing?&lt;/h3&gt;
+&lt;p&gt;Run the following code in the R console and guess what they are doing&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;n &amp;lt;- 1000
+x &amp;lt;- seq(1,n)
+sum(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Possible Answers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sum creates a list of numbers and seq adds them up.&lt;/li&gt;
+&lt;li&gt;seq creates a list of numbers and sum adds them up.&lt;/li&gt;
+&lt;li&gt;seq computes the difference between two arguments and sum computes the + sum of 1 through 1000.&lt;/li&gt;
+&lt;li&gt;sum always returns the same number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Based on the result, what do you think the functions seq and sum do? You can use the help system.&lt;/p&gt;
+&lt;h3 id=&#34;ex-2-nested-functions&#34;&gt;Ex. 2: Nested functions&lt;/h3&gt;
+&lt;p&gt;Use one line of code to compute the log, to the base 10, of the square root of 100. Make sure your code includes the &lt;code&gt;log10()&lt;/code&gt; and &lt;code&gt;sqrt()&lt;/code&gt; functions.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Scripts</title>
+      <link>//localhost:1313/docs/get_ready/r-scripts/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/r-scripts/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;If you have sequences of commands to perform, and you want to be able to recreate it later, or to share it with your colleagues, a good idea is to type it into a script.&lt;/p&gt;
+&lt;p&gt;In this section you will learn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;How to create a new script&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How to use (and re-use) a script&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-is-it-a-good-idea&#34;&gt;Why is it a good idea&lt;/h2&gt;
+&lt;p&gt;For example, with the credit example we have been using before, you do not want to type the complicated fixed payment formula each time you want to simulate the money you would have to reimburse.&lt;/p&gt;
+&lt;p&gt;If we go back to our loan example and want to make another simulation with \(N=36\), i.e. simulate the effect of repaying over a longer period, we could just simply redefine \(N\) and use the same code that we wrote before. It would be fine if you just typed that code and you did not close down the R console. However, if you want to do the same exercise tomorrow, you will need to rewrite everything from scratch. One way to avoid this is to save your work into script files.&lt;/p&gt;
+&lt;h2 id=&#34;creating-your-r-script&#34;&gt;Creating your R Script&lt;/h2&gt;
+&lt;p&gt;A &lt;em&gt;R Script file&lt;/em&gt; is just a plain text file containing R commands.&lt;/p&gt;
+&lt;p&gt;By creating and saving a script, like the code used in the previous section, we would not need to retype everything, but we would simply need to open the R script, change the variables according to the new simulation you want to do.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If you&amp;rsquo;re working with the Windows R GUI there is a built-in script editor. To get to it, pull down the File menu and choose New Script. A window will open in which you can type your script.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you&amp;rsquo;re working with R Studio IDE, there is also a built-in script editor. To get to it, pull down the File menu and choose New File and then choose R Script. A new tab will open in the Source pane in which you can type your script. (more on that when we install the R Studio IDE)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Try writing a script into your editor and see how much easier it is to execute the code when you&amp;rsquo;ve already saved a script.&lt;/p&gt;
+&lt;p&gt;Once you opened a new R script file, type the following sequence of commands into the text editor&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;L &amp;lt;- 10000   # L is the amount received Loan
+N &amp;lt;- 24      # N is the number of months
+r &amp;lt;- 6       # r is annual interest rate (expressed in percentage)
+
+# m will calculate the fixed payment due
+m &amp;lt;- L * (r/1200) *(1+r/1200)^N / ((1 + r/1200)^N - 1)  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to run a line of command, select the code you want to run with your mouse and press &lt;code&gt;CTRL + Enter&lt;/code&gt; keys.
+This means you can run part of line, a complete line, or a block of several lines. In the latter case, R will run the command one after another.&lt;/p&gt;
+&lt;h2 id=&#34;include-comments&#34;&gt;Include comments&lt;/h2&gt;
+&lt;p&gt;It is a &lt;strong&gt;good practice to include comments&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;These comments may seem burdersome at first, but you will be very happy to find them when you will open your script in six months from now. Comments are easy to add as they start with a hashtag &lt;code&gt;#&lt;/code&gt;. Text typed after this hastag is not evaluated. We can use this to write reminders of why we wrote the code we wrote. When we read it in the future, we&amp;rsquo;ll be reminded of &lt;strong&gt;why&lt;/strong&gt; we wrote these particular lines of code.&lt;/p&gt;
+&lt;p&gt;Try the code you just typed to make sure that you did not make any mistakes.&lt;/p&gt;
+&lt;p&gt;To do this, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Test your code one line at a time. Go at the end of the line and press &lt;code&gt;CTRL + Enter&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Test several lines of codes: Block the code you want to evaluate and press &lt;code&gt;CTRL + Enter&lt;/code&gt;   (&lt;em&gt;To block the code, locate your mouse at the beginning of the code you want to evaluate, press and hold the &lt;code&gt;SHIFT&lt;/code&gt; key, mouse click at the end of the code to be tested and release the SHIFT key. The code you want to evaluate should be highlighted&lt;/em&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you are satisfied with your work, you can save the script for later use by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Going to the File menu and choose Save, or&lt;/li&gt;
+&lt;li&gt;type Directly &lt;code&gt;CTRL + S&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first time, you are saving the script, a window will ask you where you want to save it and the name of the file you want to use. Choose a directory and a name that carries enough meaning so you can easily retrieve it later on!&lt;/p&gt;
+&lt;h2 id=&#34;using-your-r-script&#34;&gt;Using your R Script&lt;/h2&gt;
+&lt;p&gt;If you have done things correctly, you should be able to solve quickly a credit problem when needed without having to think too much about the formula if we ask you to do so two days (or six months) from now.&lt;/p&gt;
+&lt;p&gt;Follow the following sequence:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open the R scripts you have saved (that&amp;rsquo;s why you need to know where and under what name you saved it!)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change the value according to your new credit problem: for example change the line where \(N\) is defined from \(24\) to \(36\).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Block the code and run it (i.e. press &lt;code&gt;CTRL + Enter&lt;/code&gt; keys)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Et voila!!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;additional-resources&#34;&gt;Additional resources&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=qqz_D1vzS5M&#34; target=&#34;_blank&#34;&gt;R Scripts video&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;This Youtube video gives a well organized description of how to create and use R scripts. The video was developed for Mac users, but you can beneficiate from most of it if you are a Windows user (by just translating &lt;code&gt;Command&lt;/code&gt; into &lt;code&gt;CTRL&lt;/code&gt; for example).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install R Studio</title>
+      <link>//localhost:1313/docs/get_ready/install-r-studio/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/install-r-studio/</guid>
+      <description>&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;
+&lt;p&gt;Below you will find the instructions to install R Studio. As we have already installed R, you can proceed directly to install R Studio. Note that the R Studio may change its websites and download procedures, and I trust you will be able to adjust if this happens!&lt;/p&gt;
+&lt;p&gt;When we last updated this page, here was the procedure:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the 
+&lt;a href=&#34;https://www.rstudio.com/products/rstudio/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rstudio web page&lt;/a&gt;. Scroll down and click on &amp;ldquo;Desktop&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioWeb.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioWeb.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Select DOWNLOAD RSTUDIO DESKTOP&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Download the installer for Windows&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload2.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload2.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Choose the version&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The website should detect the version that best suit your computer.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-the-platform&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload3.png&#34; data-caption=&#34;Choose the platform&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload3.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose the platform
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;If you are not satisfied with this choice, you can scroll down and select the version that best suit your needs.&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Save the launcher&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-save-the-launcher&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioSaveLauncher.png&#34; data-caption=&#34;Save the Launcher&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioSaveLauncher.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Save the Launcher
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Open and run the file you just downloaded &lt;code&gt;RStudio-1.3.1073.exe&lt;/code&gt; (or the last version at the time of download)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You don&amp;rsquo;t have to change any of the defaults for the installation&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Studio Interface</title>
+      <link>//localhost:1313/docs/get_ready/studio-interface/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/studio-interface/</guid>
+      <description>&lt;p&gt;Once R Studio IDE is installed, the best way to discover R Studio is to follow the first 20 minutes of the introductory video 
+&lt;a href=&#34;https://rstudio.com/resources/webinars/programming-part-1-writing-code-in-rstudio/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Programming - Part 1 (Writing code in RStudio)&lt;/a&gt; developed by R Studio.&lt;/p&gt;
+&lt;p&gt;The video presents the different components of the IDE, and how to make the best use of it.
+(You can skip the installation part of the video)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Packages</title>
+      <link>//localhost:1313/docs/get_ready/r-packages/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/r-packages/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;R packages are collections of functions and data sets. They increase the power of R by improving existing base R functionalities, or by adding new ones.&lt;/p&gt;
+&lt;p&gt;In this section, you learn the following about packages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What are packages ?&lt;/li&gt;
+&lt;li&gt;Where can you find packages?&lt;/li&gt;
+&lt;li&gt;How to install packages&lt;/li&gt;
+&lt;li&gt;What are some functions that are related to install.packages() and that you can use to update, remove, … packages?&lt;/li&gt;
+&lt;li&gt;How can you use the user interface to install packages?&lt;/li&gt;
+&lt;li&gt;How do you load packages?&lt;/li&gt;
+&lt;li&gt;How to learn about these packages?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-is-a-package&#34;&gt;What is a package?&lt;/h2&gt;
+&lt;p&gt;A package typically includes code (not only R code!), documentation for the package and for the functions inside, some tests to check everything works as it should, and data sets.&lt;/p&gt;
+&lt;p&gt;The basic information about a package is provided in the DESCRIPTION file, where you can find out what the package does, who the author is, what version the documentation belongs to, the date, the type of license its use, and the package dependencies.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-repositories&#34;&gt;What Are Repositories?&lt;/h2&gt;
+&lt;p&gt;A repository is a place where packages are located so you can install them from it. Typically they are online and accesible to everyone. The most popular repository for R packages is &lt;strong&gt;CRAN&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;CRAN is the official repository, it is a network web servers mantained by the R community around the world. It is coordinated by the R foundation, and for a package to be published here it needs to pass several tests that ensure the package is following CRAN policies.&lt;/p&gt;
+&lt;h2 id=&#34;installing-packages-from-cran&#34;&gt;Installing packages from CRAN&lt;/h2&gt;
+&lt;p&gt;How you can install a package will depend on where it is located. So, for publicly available packages, this means to what repository it belongs.&lt;/p&gt;
+&lt;p&gt;In our case, all the packages we will use are available on the CRAN repository.&lt;/p&gt;
+&lt;p&gt;During the course, we will use extensively the package &lt;code&gt;mlogit&lt;/code&gt;. You will need to install this package on to your computer before you can actually use it. So to install the packages mlogit, simply type:&lt;/p&gt;
+&lt;p&gt;To install this package, you can either do it &amp;ldquo;manually&amp;rdquo; or using the R Studio interface.&lt;/p&gt;
+&lt;p&gt;If you want to do it directly from the console, you can use the command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;install.packages(&amp;quot;mlogit&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After running this, you will receive some messages on screen. They will depend on what operating system you are using, the dependences, and if the package was succesfully installed.&lt;/p&gt;
+&lt;p&gt;With RStudio, you can also use the menu. Follow Tools -&amp;gt; Install Packages&amp;hellip; , and there you will get a pop-up window to select the package you want to install:&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-type-in-the-package-name-you-want-to-install&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/installpackages/installpackages.png&#34; data-caption=&#34;Type in the package name you want to install&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/installpackages/installpackages.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Type in the package name you want to install
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Normally, when you type the first letters, you will be proposed list of package names from which you can select.&lt;/p&gt;
+&lt;p&gt;Once you have selected the package to install, just click the button &lt;code&gt;Install&lt;/code&gt;. You will receive some messages on the screen. They will depend on what operating system you are using, the dependences, and if the package was succesfully installed.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-check-installed-packages-and-update-them&#34;&gt;How to check installed packages and update them&lt;/h2&gt;
+&lt;p&gt;R packages are often updated by their developers. It is possible that sooner than later you will need to update or replace some of the packages.&lt;/p&gt;
+&lt;p&gt;With R Studio, you can keep track of the packages that are already installed on your computer, by clicking on the Packages tab of the Files, Plots, Packages, Help, Viewer Pane.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-update-packages-with-r-studio&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/installpackages/update-packages.png&#34; data-caption=&#34;Update packages with R Studio&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/installpackages/update-packages.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Update packages with R Studio
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Once you do that, you will see a list of installed packgages, and have the possibility to update them. It is a good idea to update the packages once a month.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-load-packages&#34;&gt;How To Load Packages&lt;/h2&gt;
+&lt;p&gt;After a package is installed, you are ready to use its functionalities. 
+To do so, you will need to load it into the computer memory. The simplest way to do this is with the &lt;code&gt;library()&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;The packages is loaded into the memory, and a few messages are sent to confirm that the packages is loaded, and some additional messages. Note that these messages will be in red color even if everything went fine!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(mlogit)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: dfidx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &#39;dfidx&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note also that the input of &lt;code&gt;install.packages()&lt;/code&gt; is a character vector and requires the name to be in quotes, while &lt;code&gt;library()&lt;/code&gt; accepts either character or name and makes it possible for you to write the name of the package without quotes.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-unload-a-package&#34;&gt;How To Unload A Package&lt;/h2&gt;
+&lt;p&gt;To unload a given package you can use the detach() function. The use will be:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;detach(&amp;quot;package:mlogit&amp;quot;, unload=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;how-to-get-help-about-the-package&#34;&gt;How to get help about the package&lt;/h2&gt;
+&lt;h3 id=&#34;help-files&#34;&gt;Help files&lt;/h3&gt;
+&lt;p&gt;As in basic R, the commands ?() and help(), are the first source of documentation when you are starting with a package.&lt;/p&gt;
+&lt;p&gt;You can get a general overview of the package using help(package = &amp;ldquo;packagename&amp;rdquo;). Besides each function can be explored individually by help(&amp;ldquo;name of the function&amp;rdquo;) or help(function, package = &amp;ldquo;package&amp;rdquo;) if the package has not been loaded, where you will typically find the description of the function and its parameters and an example of application.&lt;/p&gt;
+&lt;p&gt;Tip: you can also use another way to see what is inside a loaded package. Use the ls() command in this way:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(mlogit)
+ls(&amp;quot;package:mlogit&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;cor.mlogit&amp;quot;            &amp;quot;cov.mlogit&amp;quot;            &amp;quot;drpar&amp;quot;                
+##  [4] &amp;quot;has.intercept&amp;quot;         &amp;quot;hmftest&amp;quot;               &amp;quot;index&amp;quot;                
+##  [7] &amp;quot;is.mFormula&amp;quot;           &amp;quot;logsum&amp;quot;                &amp;quot;lrtest&amp;quot;               
+## [10] &amp;quot;med&amp;quot;                   &amp;quot;mFormula&amp;quot;              &amp;quot;mlogit&amp;quot;               
+## [13] &amp;quot;mlogit.data&amp;quot;           &amp;quot;mlogit.optim&amp;quot;          &amp;quot;model.response.mlogit&amp;quot;
+## [16] &amp;quot;prpar&amp;quot;                 &amp;quot;qrpar&amp;quot;                 &amp;quot;rg&amp;quot;                   
+## [19] &amp;quot;rpar&amp;quot;                  &amp;quot;scoretest&amp;quot;             &amp;quot;stdev&amp;quot;                
+## [22] &amp;quot;waldtest&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;vignettes&#34;&gt;Vignettes&lt;/h3&gt;
+&lt;p&gt;The vignettes are documents where the authors show some functionalities of their package in a more detailed way. Following vignettes is a great way start to start working with it before doing your own analysis.&lt;/p&gt;
+&lt;p&gt;They are usually accessible at the top of the package help file.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-vignettes-provides-package-documentation&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/installpackages/vignettes.png&#34; data-caption=&#34;Vignettes provides package documentation&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/installpackages/vignettes.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Vignettes provides package documentation
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;You can also browse directly the vignettes available using:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;browseVignettes(package=&amp;quot;mlogit&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A browser window will open so you can easily explore and click on the preferred vignette to open it.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

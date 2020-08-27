@@ -1,0 +1,1033 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learning objectives R packages are collections of functions and data sets. They increase the power of R by improving existing base R functionalities, or by adding new ones.
+In this section, you learn the following about packages:">
+
+  
+  <link rel="alternate" hreflang="en-us" href="//localhost:1313/docs/get_ready/r-packages/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="//localhost:1313/docs/get_ready/r-packages/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Learning R">
+  <meta property="og:url" content="//localhost:1313/docs/get_ready/r-packages/">
+  <meta property="og:title" content="R Packages | Learning R">
+  <meta property="og:description" content="Learning objectives R packages are collections of functions and data sets. They increase the power of R by improving existing base R functionalities, or by adding new ones.
+In this section, you learn the following about packages:"><meta property="og:image" content="//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png">
+  <meta property="twitter:image" content="//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-02-27T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-02-27T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>R Packages | Learning R</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_0x70_resize_lanczos_2.png" alt="Learning R"></a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_0x70_resize_lanczos_2.png" alt="Learning R"></a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/docs/"><span>Documentation</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/docs/">Docs</a></li>
+    
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/get_ready/"><i class="fas fa-book pr-1"></i>Getting Ready</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/get_ready/why-r/">Why R ?</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-motivation/">Tips for Learning R</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/install-r-on-windows/">Install R on Windows</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-objects/">R Objects</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-functions/">R Functions</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/install-r-studio/">Install R Studio</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/studio-interface/">Studio Interface</a></li>
+
+
+
+  <li class="active"><a href="/docs/get_ready/r-packages/">R Packages</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/data_structures/"><i class="fas fa-book pr-1"></i>Data Structures</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/data_structures/basic-data-types/">Basic Data Types</a></li>
+
+
+
+  <li class=""><a href="/docs/data_structures/vectors/">Vectors</a></li>
+
+
+
+  <li class=""><a href="/docs/data_structures/matrices/">Matrices</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#learning-objectives">Learning objectives</a></li>
+    <li><a href="#what-is-a-package">What is a package?</a></li>
+    <li><a href="#what-are-repositories">What Are Repositories?</a></li>
+    <li><a href="#installing-packages-from-cran">Installing packages from CRAN</a></li>
+    <li><a href="#how-to-check-installed-packages-and-update-them">How to check installed packages and update them</a></li>
+    <li><a href="#how-to-load-packages">How To Load Packages</a></li>
+    <li><a href="#how-to-unload-a-package">How To Unload A Package</a></li>
+    <li><a href="#how-to-get-help-about-the-package">How to get help about the package</a>
+      <ul>
+        <li><a href="#help-files">Help files</a></li>
+        <li><a href="#vignettes">Vignettes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>R Packages</h1>
+
+          <div class="article-style">
+            <h2 id="learning-objectives">Learning objectives</h2>
+<p>R packages are collections of functions and data sets. They increase the power of R by improving existing base R functionalities, or by adding new ones.</p>
+<p>In this section, you learn the following about packages:</p>
+<ul>
+<li>What are packages ?</li>
+<li>Where can you find packages?</li>
+<li>How to install packages</li>
+<li>What are some functions that are related to install.packages() and that you can use to update, remove, … packages?</li>
+<li>How can you use the user interface to install packages?</li>
+<li>How do you load packages?</li>
+<li>How to learn about these packages?</li>
+</ul>
+<h2 id="what-is-a-package">What is a package?</h2>
+<p>A package typically includes code (not only R code!), documentation for the package and for the functions inside, some tests to check everything works as it should, and data sets.</p>
+<p>The basic information about a package is provided in the DESCRIPTION file, where you can find out what the package does, who the author is, what version the documentation belongs to, the date, the type of license its use, and the package dependencies.</p>
+<h2 id="what-are-repositories">What Are Repositories?</h2>
+<p>A repository is a place where packages are located so you can install them from it. Typically they are online and accesible to everyone. The most popular repository for R packages is <strong>CRAN</strong>.</p>
+<p>CRAN is the official repository, it is a network web servers mantained by the R community around the world. It is coordinated by the R foundation, and for a package to be published here it needs to pass several tests that ensure the package is following CRAN policies.</p>
+<h2 id="installing-packages-from-cran">Installing packages from CRAN</h2>
+<p>How you can install a package will depend on where it is located. So, for publicly available packages, this means to what repository it belongs.</p>
+<p>In our case, all the packages we will use are available on the CRAN repository.</p>
+<p>During the course, we will use extensively the package <code>mlogit</code>. You will need to install this package on to your computer before you can actually use it. So to install the packages mlogit, simply type:</p>
+<p>To install this package, you can either do it &ldquo;manually&rdquo; or using the R Studio interface.</p>
+<p>If you want to do it directly from the console, you can use the command:</p>
+<pre><code class="language-r">install.packages(&quot;mlogit&quot;)
+</code></pre>
+<p>After running this, you will receive some messages on screen. They will depend on what operating system you are using, the dependences, and if the package was succesfully installed.</p>
+<p>With RStudio, you can also use the menu. Follow Tools -&gt; Install Packages&hellip; , and there you will get a pop-up window to select the package you want to install:</p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-type-in-the-package-name-you-want-to-install">
+
+
+  <a data-fancybox="" href="/media/installpackages/installpackages.png" data-caption="Type in the package name you want to install">
+
+
+  <img src="/media/installpackages/installpackages.png" alt=""  >
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure " data-post=":" class="numbered">
+    Type in the package name you want to install
+  </figcaption>
+
+
+</figure>
+
+<p>Normally, when you type the first letters, you will be proposed list of package names from which you can select.</p>
+<p>Once you have selected the package to install, just click the button <code>Install</code>. You will receive some messages on the screen. They will depend on what operating system you are using, the dependences, and if the package was succesfully installed.</p>
+<h2 id="how-to-check-installed-packages-and-update-them">How to check installed packages and update them</h2>
+<p>R packages are often updated by their developers. It is possible that sooner than later you will need to update or replace some of the packages.</p>
+<p>With R Studio, you can keep track of the packages that are already installed on your computer, by clicking on the Packages tab of the Files, Plots, Packages, Help, Viewer Pane.</p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-update-packages-with-r-studio">
+
+
+  <a data-fancybox="" href="/media/installpackages/update-packages.png" data-caption="Update packages with R Studio">
+
+
+  <img src="/media/installpackages/update-packages.png" alt=""  >
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure " data-post=":" class="numbered">
+    Update packages with R Studio
+  </figcaption>
+
+
+</figure>
+
+<p>Once you do that, you will see a list of installed packgages, and have the possibility to update them. It is a good idea to update the packages once a month.</p>
+<h2 id="how-to-load-packages">How To Load Packages</h2>
+<p>After a package is installed, you are ready to use its functionalities. 
+To do so, you will need to load it into the computer memory. The simplest way to do this is with the <code>library()</code> command.</p>
+<p>The packages is loaded into the memory, and a few messages are sent to confirm that the packages is loaded, and some additional messages. Note that these messages will be in red color even if everything went fine!</p>
+<pre><code class="language-r">library(mlogit)
+</code></pre>
+<pre><code>## Loading required package: dfidx
+</code></pre>
+<pre><code>## 
+## Attaching package: 'dfidx'
+</code></pre>
+<pre><code>## The following object is masked from 'package:stats':
+## 
+##     filter
+</code></pre>
+<p>Note also that the input of <code>install.packages()</code> is a character vector and requires the name to be in quotes, while <code>library()</code> accepts either character or name and makes it possible for you to write the name of the package without quotes.</p>
+<h2 id="how-to-unload-a-package">How To Unload A Package</h2>
+<p>To unload a given package you can use the detach() function. The use will be:</p>
+<pre><code class="language-r">detach(&quot;package:mlogit&quot;, unload=TRUE)
+</code></pre>
+<h2 id="how-to-get-help-about-the-package">How to get help about the package</h2>
+<h3 id="help-files">Help files</h3>
+<p>As in basic R, the commands ?() and help(), are the first source of documentation when you are starting with a package.</p>
+<p>You can get a general overview of the package using help(package = &ldquo;packagename&rdquo;). Besides each function can be explored individually by help(&ldquo;name of the function&rdquo;) or help(function, package = &ldquo;package&rdquo;) if the package has not been loaded, where you will typically find the description of the function and its parameters and an example of application.</p>
+<p>Tip: you can also use another way to see what is inside a loaded package. Use the ls() command in this way:</p>
+<pre><code class="language-r">library(mlogit)
+ls(&quot;package:mlogit&quot;)
+</code></pre>
+<pre><code>##  [1] &quot;cor.mlogit&quot;            &quot;cov.mlogit&quot;            &quot;drpar&quot;                
+##  [4] &quot;has.intercept&quot;         &quot;hmftest&quot;               &quot;index&quot;                
+##  [7] &quot;is.mFormula&quot;           &quot;logsum&quot;                &quot;lrtest&quot;               
+## [10] &quot;med&quot;                   &quot;mFormula&quot;              &quot;mlogit&quot;               
+## [13] &quot;mlogit.data&quot;           &quot;mlogit.optim&quot;          &quot;model.response.mlogit&quot;
+## [16] &quot;prpar&quot;                 &quot;qrpar&quot;                 &quot;rg&quot;                   
+## [19] &quot;rpar&quot;                  &quot;scoretest&quot;             &quot;stdev&quot;                
+## [22] &quot;waldtest&quot;
+</code></pre>
+<h3 id="vignettes">Vignettes</h3>
+<p>The vignettes are documents where the authors show some functionalities of their package in a more detailed way. Following vignettes is a great way start to start working with it before doing your own analysis.</p>
+<p>They are usually accessible at the top of the package help file.</p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-vignettes-provides-package-documentation">
+
+
+  <a data-fancybox="" href="/media/installpackages/vignettes.png" data-caption="Vignettes provides package documentation">
+
+
+  <img src="/media/installpackages/vignettes.png" alt=""  >
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure " data-post=":" class="numbered">
+    Vignettes provides package documentation
+  </figcaption>
+
+
+</figure>
+
+<p>You can also browse directly the vignettes available using:</p>
+<pre><code class="language-r">browseVignettes(package=&quot;mlogit&quot;)
+</code></pre>
+<p>A browser window will open so you can easily explore and click on the preferred vignette to open it.</p>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/docs/get_ready/studio-interface/" rel="next">Studio Interface</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 27, 2019</p>
+
+          
+
+
+
+
+
+          
+
+
+          
+
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Website Builder</a>
+    
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

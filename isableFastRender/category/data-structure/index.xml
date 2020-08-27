@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data structure | Learning R</title>
+    <link>//localhost:1313/category/data-structure/</link>
+      <atom:link href="//localhost:1313/category/data-structure/index.xml" rel="self" type="application/rss+xml" />
+    <description>data structure</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 19 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png</url>
+      <title>data structure</title>
+      <link>//localhost:1313/category/data-structure/</link>
+    </image>
+    
+    <item>
+      <title>Basic Data Types</title>
+      <link>//localhost:1313/docs/data_structures/basic-data-types/</link>
+      <pubDate>Tue, 19 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/data_structures/basic-data-types/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;We have seen that we can store objects in the R workspace. In our earlier example, we created variables that would store one piece of information, i.e. a number.&lt;/p&gt;
+&lt;p&gt;As you would expect, R can store many different types of data. We call them R basic &lt;em&gt;data types&lt;/em&gt;. We call them &amp;ldquo;basic&amp;rdquo; because they can be assembled into more complex data structures (vectors, arrays, dataframes, etc.) that we will study later.&lt;/p&gt;
+&lt;p&gt;In this section you will learn about the basic data types you will be using for our analyses.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#numeric&#34;&gt;Numerics (real numbers) &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#integers&#34;&gt;Integers &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#logicals&#34;&gt;Logicals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#characters&#34;&gt;Characters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#factors&#34;&gt;Factors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;numeric--real-numbers&#34;&gt;Numeric  (&lt;em&gt;real numbers&lt;/em&gt;)&lt;/h2&gt;
+&lt;p&gt;Real numbers are stored as &lt;em&gt;numerics&lt;/em&gt; in R. It is the default computational data type.&lt;/p&gt;
+&lt;p&gt;If we assign a decimal value to a variable $ x $ as follows, $ x $ will be of numeric type. Note that, even if we assign an integer to a variable $ y $, it is still being saved as a numeric value.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(x &amp;lt;-  10.5)   # assign a decimal value 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;class(x)       # print the class name of x 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;y &amp;lt;- 1 
+class(y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The fact that $ y $ is not an integer can be confirmed with the &lt;code&gt;is.integer&lt;/code&gt; function&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;is.integer(y)  # is k an integer? 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;integers&#34;&gt;Integers&lt;/h2&gt;
+&lt;p&gt;There are several ways to create an integer variable in R&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(z &amp;lt;- 3L)  # declare an integer by appending an L suffix
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;is.integer(z)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(z &amp;lt;- as.integer(3))  # use the as.integer( ) function
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;is.integer(z)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that the function &lt;code&gt;as.integer&lt;/code&gt; can coerce a numeric value (or even some character variable) into an integer value.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(z &amp;lt;- as.integer(3.14))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;is.integer(z)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(z &amp;lt;- as.integer(&amp;quot;5.27&amp;quot;))  # coerce a decimal string 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;is.integer(z)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;logicals&#34;&gt;Logicals&lt;/h2&gt;
+&lt;p&gt;A logical value is either &lt;code&gt;TRUE&lt;/code&gt; or &lt;code&gt;FALSE&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A logical is often created via comparison between variables.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- 1; y &amp;lt;- 2   # sample values 
+(z &amp;lt;-  x &amp;gt; y)      # is x larger than y? 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;class(z)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;logical&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Standard logical operations are &amp;ldquo;&amp;amp;&amp;rdquo; (and), &amp;ldquo;|&amp;rdquo; (or), and &amp;ldquo;!&amp;rdquo; (negation).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;u &amp;lt;- TRUE; v &amp;lt;- FALSE 
+u &amp;amp; v          # u AND v 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;u | v          # u OR v 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;!u             # negation of u 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Further details and related logical operations can be found when typing &lt;code&gt;help(&amp;quot;&amp;amp;&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Finally, it is often useful to perform arithmetic on logical values. You just have to remember that the &lt;code&gt;TRUE&lt;/code&gt; has the value 1, while &lt;code&gt;FALSE&lt;/code&gt; has value 0.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(as.integer(TRUE))  # is k an integer? 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;TRUE + TRUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;characters&#34;&gt;Characters&lt;/h2&gt;
+&lt;p&gt;In R, strings are stored as a &lt;code&gt;character&lt;/code&gt; object. Strings are surrounded by two &lt;code&gt;&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(x &amp;lt;- &amp;quot;This is a string&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;This is a string&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;class(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;character&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you do not use the &lt;code&gt;&amp;quot;&lt;/code&gt;, R will look for a variable instead of a string of characters, and will most likely throw an error message.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(x &amp;lt;- This is a string) 
+class(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Error: &amp;lt;text&amp;gt;:1:12: unexpected symbol
+## 1: (x &amp;lt;- This is
+##                ^
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can convert objects into character values with the &lt;code&gt;as.character()&lt;/code&gt; function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(x = as.character(3.14)) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;3.14&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Two character values can be concatenated with the &lt;code&gt;paste()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fname = &amp;quot;Joe&amp;quot;; lname =&amp;quot;Smith&amp;quot; 
+paste(fname, lname) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Joe Smith&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To extract a substring, we apply the &lt;code&gt;substr()&lt;/code&gt; function. Here is an example showing how to extract the substring between the third and fourteenth positions in a string.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;substr(&amp;quot;Mary has a little lamb.&amp;quot;, start=3, stop=14) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;ry has a lit&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And to replace the first occurrence of the word &amp;ldquo;little&amp;rdquo; by another word &amp;ldquo;big&amp;rdquo; in the string, we apply the &lt;code&gt;sub()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sub(&amp;quot;little&amp;quot;, &amp;quot;big&amp;quot;, &amp;quot;Mary has a little lamb.&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Mary has a big lamb.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;factors&#34;&gt;Factors&lt;/h2&gt;
+&lt;p&gt;With R, factors store categorical variables, i.e. variables that take on a limited number of different values. Categorical variables enter into statistical models differently than continuous variables, so R developers have created a specific data type to insure that the modeling functions will treat such data correctly.&lt;/p&gt;
+&lt;p&gt;Practically, factors are stored as a vector of integer values with a corresponding set of character values to use when the factor is displayed.&lt;/p&gt;
+&lt;p&gt;Use the function &lt;code&gt;factor()&lt;/code&gt; to create a factor. The only required argument to factor is a vector of values which will be returned as a vector of factor values. Both numeric and character variables can be made into factors, but a factor&amp;rsquo;s levels will always be character values. You can see the possible levels for a factor through the &lt;code&gt;levels()&lt;/code&gt; command.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Transform character vector into a factor
+data = c(&amp;quot;a&amp;quot;,&amp;quot;c&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;)
+fdata = factor(data)
+fdata
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] a c b a a b
+## Levels: a b c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Transform numeric vector into a factor
+data = c(1,2,2,3,1,2,3,3,1,2,3,3,1)
+fdata = factor(data)
+fdata
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] 1 2 2 3 1 2 3 3 1 2 3 3 1
+## Levels: 1 2 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The levels of a factor are used when displaying the factor&amp;rsquo;s values. You can change these levels at the time you create a factor by passing a vector with the new values through the &lt;code&gt;labels= argument&lt;/code&gt;. Note that this actually changes the internal levels of the factor, and to change the labels of a factor after it has been created, the assignment form  (&lt;code&gt;&amp;lt;-&lt;/code&gt;) of the levels function is used.&lt;/p&gt;
+&lt;p&gt;To convert the default factor fdata we use the assignment form of the levels function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;data = c(1,2,2,3,1,2,3,3,1,2,3,3,1)
+
+#define specific labels when constructing the factor
+fdata = factor(data, labels = c(&amp;quot;Weak&amp;quot;, &amp;quot;Mild&amp;quot;, &amp;quot;Strong&amp;quot;)) 
+fdata
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] Weak   Mild   Mild   Strong Weak   Mild   Strong Strong Weak   Mild  
+## [11] Strong Strong Weak  
+## Levels: Weak Mild Strong
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#re-define labels after construction
+levels(fdata) = c(&#39;I&#39;,&#39;II&#39;,&#39;III&#39;)
+fdata
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] I   II  II  III I   II  III III I   II  III III I  
+## Levels: I II III
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Factors are an efficient way to store character values, because each unique character value is stored only once, and the data itself is stored as a vector of integers.&lt;/p&gt;
+&lt;p&gt;To change the order in which the levels will be displayed from their default sorted order, the levels= argument can be given a vector of all the possible values of the variable in the order you desire.&lt;/p&gt;
+&lt;p&gt;Consider some data consisting of the names of months:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;theMonths = c(&amp;quot;March&amp;quot;,&amp;quot;April&amp;quot;,&amp;quot;January&amp;quot;,&amp;quot;November&amp;quot;,&amp;quot;January&amp;quot;,
+ &amp;quot;September&amp;quot;,&amp;quot;October&amp;quot;,&amp;quot;September&amp;quot;,&amp;quot;November&amp;quot;,&amp;quot;August&amp;quot;,
+ &amp;quot;January&amp;quot;,&amp;quot;November&amp;quot;,&amp;quot;November&amp;quot;,&amp;quot;February&amp;quot;,&amp;quot;May&amp;quot;,&amp;quot;August&amp;quot;,
+ &amp;quot;July&amp;quot;,&amp;quot;December&amp;quot;,&amp;quot;August&amp;quot;,&amp;quot;August&amp;quot;,&amp;quot;September&amp;quot;,&amp;quot;November&amp;quot;,
+ &amp;quot;February&amp;quot;,&amp;quot;April&amp;quot;)
+ theMonths = factor(theMonths)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By default, the levels will be presented using alphabetic order, which in the case of Months will make readings of results a bit difficult when summarizing information.&lt;/p&gt;
+&lt;p&gt;For example, the function &lt;code&gt;table()&lt;/code&gt; will tell us how many times each month has appeared in our vector theMonths&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;table(theMonths)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## theMonths
+##     April    August  December  February   January      July     March       May 
+##         2         4         1         2         3         1         1         1 
+##  November   October September 
+##         5         1         3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Although the months clearly have an ordering, this is not reflected in the output of the table function.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;theMonths &amp;lt;- factor(theMonths,levels=c(&amp;quot;January&amp;quot;,&amp;quot;February&amp;quot;,&amp;quot;March&amp;quot;,
+             &amp;quot;April&amp;quot;,&amp;quot;May&amp;quot;,&amp;quot;June&amp;quot;,&amp;quot;July&amp;quot;,&amp;quot;August&amp;quot;,&amp;quot;September&amp;quot;,
+             &amp;quot;October&amp;quot;,&amp;quot;November&amp;quot;,&amp;quot;December&amp;quot;))
+
+table(theMonths)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## theMonths
+##   January  February     March     April       May      June      July    August 
+##         3         2         1         2         1         0         1         4 
+## September   October  November  December 
+##         3         1         5         1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;theMonths[2] &amp;gt; theMonths[3]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in Ops.factor(theMonths[2], theMonths[3]): &#39;&amp;gt;&#39; not meaningful for
+## factors
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As the results of the last operation shows, the comparison operators are not supported for unordered factors. Creating an ordered factor solves this problem:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;theMonths &amp;lt;- factor(theMonths,levels=c(&amp;quot;January&amp;quot;,&amp;quot;February&amp;quot;,&amp;quot;March&amp;quot;,
+             &amp;quot;April&amp;quot;,&amp;quot;May&amp;quot;,&amp;quot;June&amp;quot;,&amp;quot;July&amp;quot;,&amp;quot;August&amp;quot;,&amp;quot;September&amp;quot;,
+             &amp;quot;October&amp;quot;,&amp;quot;November&amp;quot;,&amp;quot;December&amp;quot;), ordered = TRUE)
+
+table(theMonths)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## theMonths
+##   January  February     March     April       May      June      July    August 
+##         3         2         1         2         1         0         1         4 
+## September   October  November  December 
+##         3         1         5         1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;theMonths[2] &amp;gt; theMonths[3]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another common way to create factors is to split a continuous variables into intervals using the &lt;code&gt;cut&lt;/code&gt; function. The &lt;code&gt;breaks= argument&lt;/code&gt; to cut is used to describe how ranges of numbers will be converted to factor values. If a number is provided through the &lt;code&gt;breaks= argument&lt;/code&gt;, the resulting factor will be created by dividing the range of the variable into that number of equal length intervals; if a vector of values is provided, the values in the vector are used to determine the breakpoint. Note that if a vector of values is provided, the number of levels of the resultant factor will be one less than the number of values in the vector.&lt;/p&gt;
+&lt;p&gt;For example, consider the women data set, which contains height and weights for a sample of women. If we wanted to create a factor corresponding to weight, with three equally-spaced levels, we could use the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;data(&amp;quot;women&amp;quot;)
+wfact = cut(women$height,3)
+wfact
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] (58,62.7]   (58,62.7]   (58,62.7]   (58,62.7]   (58,62.7]   (62.7,67.3]
+##  [7] (62.7,67.3] (62.7,67.3] (62.7,67.3] (62.7,67.3] (67.3,72]   (67.3,72]  
+## [13] (67.3,72]   (67.3,72]   (67.3,72]  
+## Levels: (58,62.7] (62.7,67.3] (67.3,72]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;table(wfact)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## wfact
+##   (58,62.7] (62.7,67.3]   (67.3,72] 
+##           5           5           5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;labels= argument&lt;/code&gt; to cut allows you to specify the levels of the factors, instead of the intervals&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wfact = cut(women$height,3,labels=c(&#39;Low&#39;,&#39;Medium&#39;,&#39;High&#39;))
+table(wfact)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## wfact
+##    Low Medium   High 
+##      5      5      5
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>install | Learning R</title>
+    <link>//localhost:1313/tag/install/</link>
+      <atom:link href="//localhost:1313/tag/install/index.xml" rel="self" type="application/rss+xml" />
+    <description>install</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png</url>
+      <title>install</title>
+      <link>//localhost:1313/tag/install/</link>
+    </image>
+    
+    <item>
+      <title>Install R Studio</title>
+      <link>//localhost:1313/docs/get_ready/install-r-studio/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/install-r-studio/</guid>
+      <description>&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;
+&lt;p&gt;Below you will find the instructions to install R Studio. As we have already installed R, you can proceed directly to install R Studio. Note that the R Studio may change its websites and download procedures, and I trust you will be able to adjust if this happens!&lt;/p&gt;
+&lt;p&gt;When we last updated this page, here was the procedure:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the 
+&lt;a href=&#34;https://www.rstudio.com/products/rstudio/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rstudio web page&lt;/a&gt;. Scroll down and click on &amp;ldquo;Desktop&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioWeb.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioWeb.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Select DOWNLOAD RSTUDIO DESKTOP&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Download the installer for Windows&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload2.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload2.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Choose the version&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The website should detect the version that best suit your computer.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-the-platform&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload3.png&#34; data-caption=&#34;Choose the platform&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload3.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose the platform
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;If you are not satisfied with this choice, you can scroll down and select the version that best suit your needs.&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Save the launcher&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-save-the-launcher&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioSaveLauncher.png&#34; data-caption=&#34;Save the Launcher&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioSaveLauncher.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Save the Launcher
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Open and run the file you just downloaded &lt;code&gt;RStudio-1.3.1073.exe&lt;/code&gt; (or the last version at the time of download)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You don&amp;rsquo;t have to change any of the defaults for the installation&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

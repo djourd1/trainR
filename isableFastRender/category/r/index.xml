@@ -1,0 +1,1986 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R | Learning R</title>
+    <link>//localhost:1313/category/r/</link>
+      <atom:link href="//localhost:1313/category/r/index.xml" rel="self" type="application/rss+xml" />
+    <description>R</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png</url>
+      <title>R</title>
+      <link>//localhost:1313/category/r/</link>
+    </image>
+    
+    <item>
+      <title>Why R ?</title>
+      <link>//localhost:1313/docs/get_ready/why-r/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/why-r/</guid>
+      <description>&lt;p&gt;R is a programming language, but it is not a programming language like C or Java. It was not created by software engineers for software development. Instead, it was developed by statisticians and data analysts as an interactive environment for data analysis.&lt;/p&gt;
+&lt;p&gt;However, like in any other programming language,you can save your work in scripts, which you can easily execute at any moment. These scripts serve as a record of the analysis you performed, a key feature that facilitates reproducible work.&lt;/p&gt;
+&lt;p&gt;Other attractive features are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;R is free !&lt;/li&gt;
+&lt;li&gt;R is open source, meaning that you can look at the codes (especially the codes of the packages you will be using). So you will know exactly what you are doing !&lt;/li&gt;
+&lt;li&gt;R runs across all major platforms: Windows, Mac OS, Unix, Linux.&lt;/li&gt;
+&lt;li&gt;R has a large and active community of users. So there are numerous resources for learning and asking questions.&lt;/li&gt;
+&lt;li&gt;R makes it easy to build meaningful (and beautiful) plots from your data&lt;/li&gt;
+&lt;li&gt;R enables developers to share software implementations of new data science techniques in the form of &amp;ldquo;packages&amp;rdquo;, which are extensions to R. There is now thousands of these packages for many different fields available for immediate use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interactive data analysis occurs on the R console. In the R console, you can execute commands as you type them. There are several ways to gain access to a console but the simplest one is to download and install R, and then start it up on your computer.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Vectors</title>
+      <link>//localhost:1313/docs/data_structures/vectors/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/data_structures/vectors/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;In this section you will learn about vectors, how to create different types of vector, and how to manipulate them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#numeric-vectors&#34;&gt;Numeric Vectors: Definition and Creation &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#generating-regular-sequences&#34;&gt;Generating regular sequences &lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#the-colon-operator&#34;&gt;The : operator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#the-seq-function&#34;&gt;The seq() function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#the-rep-function&#34;&gt;The rep() function&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#vector-arithmetic&#34;&gt;Vector Arithmetic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#useful-functions-applied-to-a-vector&#34;&gt;Useful functions applied to a vector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#vectors-with-other-types-of-data&#34;&gt;Vectors with other types of data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#automatic-coercing-within-vectors&#34;&gt;Automatic coercing within vectors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;numeric-vectors&#34;&gt;Numeric vectors&lt;/h2&gt;
+&lt;p&gt;R operates on named data structures. The simplest data structure is the numeric vector: a single entity consisting of an &lt;em&gt;ordered collection of numbers&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To set up a vector, we use the R function &lt;code&gt;c()&lt;/code&gt; which, in this context, can take an arbitrary number of arguments:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(10.4, 5.6, 3.1, 6.4, 21.7)
+x
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10.4  5.6  3.1  6.4 21.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;class(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also use the function &lt;code&gt;c()&lt;/code&gt; to concatenate several existing vectors&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(10.4, 5.6, 3.1 )
+y &amp;lt;- c(2,3,4)
+z &amp;lt;- c(x,y)
+z
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10.4  5.6  3.1  2.0  3.0  4.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;class(z)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;generating-regular-sequences&#34;&gt;Generating regular sequences&lt;/h2&gt;
+&lt;p&gt;R has also a number of built-in functions for generating commonly used sequences of numbers.&lt;/p&gt;
+&lt;h3 id=&#34;the-colon-operator-&#34;&gt;The colon operator &lt;code&gt;:&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;:&lt;/code&gt;  creates regular sequence of integers. Its syntax is quite intuite: to create a regular sequence of integers from 1 to 10, just type:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;1:10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  1  2  3  4  5  6  7  8  9 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;15:5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] 15 14 13 12 11 10  9  8  7  6  5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The colon operator has high priority within an expression. Check the results of the following expressions to understand the order in which the operators are working:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;2*1:15
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  2  4  6  8 10 12 14 16 18 20 22 24 26 28 30
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;n &amp;lt;- 10
+1:n-1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] 0 1 2 3 4 5 6 7 8 9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;1:(n-1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1 2 3 4 5 6 7 8 9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;the-seq-function&#34;&gt;The &lt;code&gt;seq()&lt;/code&gt; function&lt;/h3&gt;
+&lt;p&gt;The function seq() is more general. 
+It has five arguments, only some of which may be specified in any one call. Consult the help file for more details. Look at the few examples to understand the function seq()&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;seq(1, 2, by=.2) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.0 1.2 1.4 1.6 1.8 2.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;seq(length=10, from =-1, by=2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] -1  1  3  5  7  9 11 13 15 17
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;the-rep-function&#34;&gt;The &lt;code&gt;rep()&lt;/code&gt; function&lt;/h3&gt;
+&lt;p&gt;The function rep() can be used for replicating an object in several ways and creating vectors.&lt;/p&gt;
+&lt;p&gt;To put, several copies end-to-end, use the argument &lt;code&gt;times&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(1.34, 2.56)
+(s5 &amp;lt;- rep(x, times=5))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] 1.34 2.56 1.34 2.56 1.34 2.56 1.34 2.56 1.34 2.56
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To repeat each element of x five times before moving on to the next, use the argument &lt;code&gt;each&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(s6 &amp;lt;- rep(x, each=3))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.34 1.34 1.34 2.56 2.56 2.56
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;vector-arithmetic&#34;&gt;Vector arithmetic&lt;/h2&gt;
+&lt;p&gt;Vectors can be used in arithmetic expressions, in which case the operations are performed &lt;strong&gt;element by element&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For example, if you add two vectors:&lt;/p&gt;
+&lt;p&gt;\begin{equation}
+\left(\begin{matrix}a\\b\\c\\d \end{matrix} \right)  + 
+\left(\begin{matrix}e\\f\\g\\h  \end{matrix} \right) =
+\left(\begin{matrix}a+e\\b+f\\c+g\\d+h \end{matrix} \right) 
+\end{equation}&lt;/p&gt;
+&lt;p&gt;In R:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(10.4, 5.6, 3.4)
+y &amp;lt;- c(3.1, 6.4, -2.1)
+(z &amp;lt;- x + y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 13.5 12.0  1.3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, vectors occurring in the same expression do not need to be of the same length. If they are not, the value of the expression is a vector with the same length as the longest vector which occurs in the expression. Shorter vectors in the expression are recycled as often as need be (perhaps fractionally) until they match the length of the longest vector. 
+In particular a constant is simply repeated.&lt;/p&gt;
+&lt;p&gt;For example: 
+\begin{equation}
+\left(\begin{matrix}a\\b\\c \end{matrix} \right)  +  e =
+\left(\begin{matrix}a+e\\b+e\\c+e \end{matrix} \right) 
+\end{equation}&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(10.4, 5.6)
+y &amp;lt;- 3.1
+(z &amp;lt;- x + y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 13.5  8.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;While this is a very convenient R feature, it can be potentially misleading as it brings unruly results when the vectors are of different length, as in the following case:&lt;/p&gt;
+&lt;p&gt;\begin{equation}
+\left(\begin{matrix}a\\b\\c\\d \end{matrix} \right)  +&lt;br&gt;
+\left(\begin{matrix}e\\f\\g \end{matrix} \right) =
+\left(\begin{matrix}a+e\\b+f\\c+g\\d+e \end{matrix} \right) 
+\end{equation}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(10.4, 5.6, 3.5)
+y &amp;lt;- c(1,2)
+z &amp;lt;- x + y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in x + y: longer object length is not a multiple of shorter object
+## length
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;z
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 11.4  7.6  4.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just to remind you of the potential danger, R will throw a warning message&lt;/p&gt;
+&lt;p&gt;The elementary arithmetic operators are the usual +, -, *, / and ^ for raising to a power. In addition all of the common arithmetic functions are available. &lt;code&gt;log&lt;/code&gt;, &lt;code&gt;exp&lt;/code&gt;, &lt;code&gt;sin&lt;/code&gt;, &lt;code&gt;cos&lt;/code&gt;, &lt;code&gt;tan&lt;/code&gt;, &lt;code&gt;sqrt&lt;/code&gt; and so on, all have their usual meaning.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(10.4, 5.6, 3.5)
+log(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2.341806 1.722767 1.252763
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;max&lt;/code&gt; and &lt;code&gt;min&lt;/code&gt; select the largest and smallest elements of a vector respectively.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;min(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;useful-functions-applied-to-a-vector&#34;&gt;Useful functions applied to a vector&lt;/h2&gt;
+&lt;p&gt;Several functions are very useful for basic statistics.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;sum()&lt;/code&gt; function, sums up all the elements of the vector. The &lt;code&gt;mean()&lt;/code&gt; function calculates the mean value of all the elements of the vector. We can combine vector arithmetics with these functions to calculate very quickly some interesting statistics of the vector.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(10.4, 5.6, 3.5, 3.1, 7.2, 3.8, 10.2, 7.8)
+mean(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 6.45
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x - mean(x)  #calculate the deviation from the mean
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  3.95 -0.85 -2.95 -3.35  0.75 -2.65  3.75  1.35
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can calculate easily the sample variance 
+$$ var(x) = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2 $$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- c(10.4, 5.6, 3.5, 3.1, 7.2, 3.8, 10.2, 7.8)
+mean(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 6.45
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;v&amp;lt;- sum((x - mean(x))^2) / (length(x)-1)  #calculate the variance
+v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 8.531429
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;var(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 8.531429
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that base R already has a built-in function for calculating the sample variance &lt;code&gt;var()&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;vectors-with-other-types-of-data&#34;&gt;Vectors with other types of data&lt;/h2&gt;
+&lt;p&gt;Vectors can contain other types of data, in particular characters and logicals.&lt;/p&gt;
+&lt;p&gt;The elements of a logical vector can have the values &lt;code&gt;TRUE&lt;/code&gt;, &lt;code&gt;FALSE&lt;/code&gt;, and &lt;code&gt;NA&lt;/code&gt; (for &amp;ldquo;not available&amp;rdquo;). The first two are often abbreviated as T and F, respectively. Note however that T and F are just variables which are set to TRUE and FALSE by default, but are not reserved words and hence can be overwritten by the user. &lt;strong&gt;Hence, it is better to always use TRUE and FALSE.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;automatic-coercing-within-vectors&#34;&gt;Automatic coercing within vectors&lt;/h2&gt;
+&lt;p&gt;In general, coercion is an attempt by R to be flexible with data types. When an entry does not match the expected type, R tries to guess what we meant. But this can also lead to confusion.&lt;/p&gt;
+&lt;p&gt;We earlier said that vectors must be all of the same type.
+So if we try to combine say numbers and characters, you might expect an error. But let&amp;rsquo;s try to combine numeric and characters in the same vector:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;c(1, &amp;quot;South Africa&amp;quot;, 3, &amp;quot;England&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;1&amp;quot;            &amp;quot;South Africa&amp;quot; &amp;quot;3&amp;quot;            &amp;quot;England&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We do not even get a warning !! So what has happened?&lt;/p&gt;
+&lt;p&gt;R has converted the 1 and the 3 to character strings. And the class of the vector is character. Even though 1 and 3 were originally numbers when we wrote it out, R has converted them to character.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;R coerced the data into a character string.&lt;/em&gt; It guessed that because we put a character string there in the middle, we meant the 1 and the 3 to actually also be character strings.&lt;/p&gt;
+&lt;p&gt;Again, be aware that R will coerce variables without any warning !
+It will only throw an error, when it attemps to coerce a variable into a new type, but cannot do it.&lt;/p&gt;
+&lt;h2 id=&#34;index-vectors-to-obtain-subsets-of-a-vector&#34;&gt;Index vectors to obtain subsets of a vector&lt;/h2&gt;
+&lt;p&gt;Subsets of the elements of a vector may be selected by appending to the name of the vector an &lt;em&gt;index vector&lt;/em&gt; in square brackets. More generally any expression that evaluates to a vector may have subsets of its elements similarly selected by appending an index vector in square brackets immediately after the expression.&lt;/p&gt;
+&lt;p&gt;Such index vectors can be any of four distinct types.&lt;/p&gt;
+&lt;h3 id=&#34;index--a-logical-vector&#34;&gt;Index = A logical vector.&lt;/h3&gt;
+&lt;p&gt;In this case the index vector is recycled to the same length as the vector from which elements are to be selected. Values corresponding to TRUE in the index vector are selected and those corresponding to FALSE are omitted. For example, the following lines reates (or re-creates) an object `yv which will contain the values of x greater than 4, in the same order.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;y &amp;lt;- x[x &amp;gt; 4]
+y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10.4  5.6  7.2 10.2  7.8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;index--a-vector-of-integers&#34;&gt;Index = A vector of integers.&lt;/h3&gt;
+&lt;p&gt;In this case the values in the index vector must lie in the set {1, 2, …, length(x)}. The corresponding elements of the vector are selected and concatenated, in that order, in the result. The index vector can be of any length and the result is of the same length as the index vector.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- rnorm(20)
+(y &amp;lt;- x[1:10])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  0.09220648  1.12491187  0.53665207  1.81840151 -0.38831663  0.06935517
+##  [7] -2.59814157 -0.20936368  0.94048022 -0.27008015
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(z &amp;lt;- x[c(1,3,2,7)])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  0.09220648  0.53665207  1.12491187 -2.59814157
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The use of index vectors can be very powerful to create complex sequences:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;c(&amp;quot;x&amp;quot;,&amp;quot;y&amp;quot;)[rep(c(1,2,2,1), times=2)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; &amp;quot;y&amp;quot; &amp;quot;x&amp;quot; &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; &amp;quot;y&amp;quot; &amp;quot;x&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;index--a-vector-of-negative-integers&#34;&gt;Index = A vector of negative Integers&lt;/h3&gt;
+&lt;p&gt;Such an index vector specifies the values &lt;em&gt;to be excluded&lt;/em&gt; rather than included. Thus:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x[-(1:5)]  # gives y all but the first five elements of x.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  0.06935517 -2.59814157 -0.20936368  0.94048022 -0.27008015  1.94953530
+##  [7] -1.46875658  1.35834277 -1.23067250 -0.54102607 -0.55928871  0.62858631
+## [13] -0.97861047  0.98952395 -1.33371635
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;index--a-vector-of-character-strings&#34;&gt;Index = A vector of character strings.&lt;/h3&gt;
+&lt;p&gt;This possibility only applies where an object has a names attribute to identify its components. In this case a sub-vector of the names vector may be used in the same way as the positive integral labels in item 2 further above.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fruit &amp;lt;- c(5, 10, 1, 20)
+names(fruit) &amp;lt;- c(&amp;quot;orange&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;apple&amp;quot;, &amp;quot;peach&amp;quot;)
+lunch &amp;lt;- fruit[c(&amp;quot;apple&amp;quot;,&amp;quot;orange&amp;quot;)]
+lunch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  apple orange 
+##      1      5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note in this case, that we added a feature to the vector, because each element of the vector is associated with a name. This is obtained by using the function &lt;code&gt;names()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The advantage is that alphanumeric names are often easier to remember than numeric indices.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install R on Windows</title>
+      <link>//localhost:1313/docs/get_ready/install-r-on-windows/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/install-r-on-windows/</guid>
+      <description>&lt;p&gt;We will concentrate on the installation on a &lt;strong&gt;Windows&lt;/strong&gt; operating system. &lt;em&gt;If you need to install it on a Mac, you can find a video at &lt;a href=&#34;https://youtu.be/GFImMj1lMRI&#34; target=&#34;_blank&#34;&gt;Install R and Rstudio on Mac&lt;/a&gt; that will help you&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For Windows operating system: click on the following link:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/bin/windows/base/&#34; target=&#34;_blank&#34;&gt;Install R for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You will be proposed to install the latest version of R that corresponds to your operating system (first link on top of the page as shown in Figure 1 ).&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-download-screen&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/cran-download.png&#34; data-caption=&#34;The download screen&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/cran-download.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    The download screen
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Feel free to explore that page. In particular, you may explore the link &amp;ldquo;Does R run under my version of Windows?&amp;rdquo; before starting the installation process.&lt;/p&gt;
+&lt;p&gt;When you are ready click the download link.&lt;/p&gt;
+&lt;p&gt;You will receive a message to save the file. Click on the &amp;ldquo;Save&amp;rdquo; button. Please note that this might take some time to download. Once the download is complete, open the file and run the programme. (I supposed that you know where and how to open the file that has just been saved. Since the way to operate is specific to your system, we do not give any special instructions here).&lt;/p&gt;
+&lt;p&gt;A setup wizard should appear. Follow the different steps: set-up your language, the directories where it will installed, etc. As a beginner, you are well advised to follow the default options proposed by the wizard! Until you reach the Finish step.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-security-warning-use-the-run-button&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r02.png&#34; data-caption=&#34;Security Warning: Use the Run button&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r02.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Security Warning: Use the Run button
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-select-language&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r03.png&#34; data-caption=&#34;Select Language&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r03.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Select Language
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-4&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r04.png&#34; data-caption=&#34;Wizard 4&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r04.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 4
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-5&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r05.png&#34; data-caption=&#34;Wizard 5&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r05.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 5
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-select-the-default-destination&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r06.png&#34; data-caption=&#34;Select the default destination&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r06.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Select the default destination
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-7&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r07.png&#34; data-caption=&#34;Wizard 7&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r07.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 7
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-8&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r08.png&#34; data-caption=&#34;Wizard 8&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r08.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 8
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-9&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r09.png&#34; data-caption=&#34;Wizard 9&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r09.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 9
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-10&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r10.png&#34; data-caption=&#34;Wizard 10&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r10.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 10
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-11&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r11.png&#34; data-caption=&#34;Wizard 11&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r11.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 11
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-wizard-12&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/install_r12.png&#34; data-caption=&#34;Wizard 12&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/install_r12.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Wizard 12
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;To check that everything went OK, you can open the R program. A R shortcut should now be present on your computer desktop screen.&lt;/p&gt;
+&lt;p&gt;Click on this new icon and you should see appearing the R console as in the Figure  13 :&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-r-console&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RConsole.jpg&#34; data-caption=&#34;R Console&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RConsole.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    R Console
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;You can type your first R command at the cursor. Type 1+1.Then type the &lt;code&gt;Enter&lt;/code&gt; key. Normally the console should create a new line that says &lt;code&gt;[1] 2&lt;/code&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-your-first-command&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RConsole2.jpg&#34; data-caption=&#34;Your first command&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RConsole2.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Your first command
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Congratulations R is up and running on your computer !&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Functions</title>
+      <link>//localhost:1313/docs/get_ready/r-functions/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/r-functions/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;Once you define variables, a data analysis process can usually be described as a series of &lt;strong&gt;functions&lt;/strong&gt; applied to the data. A function is a set of statements organized together to perform a specific task.&lt;/p&gt;
+&lt;p&gt;R includes many predefined functions. We&amp;rsquo;ve already encountered the &lt;code&gt;install-packages&lt;/code&gt;, &lt;code&gt;library&lt;/code&gt;, and &lt;code&gt;ls&lt;/code&gt; functions. We have also used several operators to solve our credit problem. There are many more functions in the base R, and many more can be added through packages. Finally, in another section, you will see that you can create your own functions.&lt;/p&gt;
+&lt;p&gt;In this section we will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Review some important information related to R predefined functions&lt;/li&gt;
+&lt;li&gt;Show you how to learn about these functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;r-functions-log-as-an-example&#34;&gt;R functions: &lt;code&gt;log()&lt;/code&gt; as an example&lt;/h2&gt;
+&lt;h4 id=&#34;r-functions-use-parenteses&#34;&gt;R functions use parenteses&lt;/h4&gt;
+&lt;p&gt;In general, to evaluate a function, we need to use parentheses.
+Note what happens when we type the function &lt;code&gt;ls&lt;/code&gt;  instead of &lt;code&gt;ls()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                                                                              
+## 1 function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+## 2     pattern, sorted = TRUE)                                                
+## 3 {                                                                          
+## 4     if (!missing(name)) {                                                  
+## 5         pos &amp;lt;- tryCatch(name, error = function(e) e)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It doesn&amp;rsquo;t evaluate the function but instead it shows us the code for &lt;code&gt;ls&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now if we add the parentheses, the function is evaluated and you see the objects in the workspace.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ls()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;r-functions-usually-require-arguments&#34;&gt;R functions usually require arguments&lt;/h4&gt;
+&lt;p&gt;Unlike &lt;code&gt;ls&lt;/code&gt;, which does not require any arguments, &lt;em&gt;most functions require at least one&lt;/em&gt;. An argument is a R object, it can be a variable or other data structures, that the function will process before returning another R object.&lt;/p&gt;
+&lt;p&gt;Here is an example of how we assign an object to the argument for the natural log function &lt;code&gt;log&lt;/code&gt;. So if I type &lt;code&gt;log(8)&lt;/code&gt;, 8 is the argument sent to the function for evaluation. I get in return the natural log of 8, i.e., 2.0794415.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;log(8)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2.079442
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Functions can take stored variables as arguments. Let&amp;rsquo;s define a variable &lt;code&gt;a&lt;/code&gt; as &lt;code&gt;1&lt;/code&gt;. So we can apply a function to a variable as well. Because &lt;code&gt;a&lt;/code&gt; has been defined as &lt;code&gt;1&lt;/code&gt;, then the &lt;code&gt;log(a)&lt;/code&gt; is &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;a &amp;lt;- 1
+log(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;functions-can-be-nested&#34;&gt;Functions can be nested&lt;/h4&gt;
+&lt;p&gt;In R, functions can be &lt;strong&gt;nested&lt;/strong&gt;. That is that you can call a function to get the argument that&amp;rsquo;s going to be used by another function.&lt;/p&gt;
+&lt;p&gt;For example, if we type the function &lt;code&gt;exp(1)&lt;/code&gt; the function for exponential, we get the mathematical constant &lt;code&gt;e&lt;/code&gt;, \(2.7182\)&lt;/p&gt;
+&lt;p&gt;Because &lt;code&gt;exp()&lt;/code&gt; is the inverse function of &lt;code&gt;log()&lt;/code&gt;, if we compute the natural log of that number, we should get back \(1\). So note that if we type function &lt;code&gt;log()&lt;/code&gt; and then inside that function we use the argument function &lt;code&gt;exp(a)&lt;/code&gt;, we first evaluate the first function, &lt;code&gt;exp(a)&lt;/code&gt;, and then we evaluate the second, and we get an answer of 1.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;log(exp(1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The important thing to remember is that functions are evaluated &lt;em&gt;from the inside out when you nest them&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;use-the-help-system-to-understand-the-functions&#34;&gt;Use the help system to understand the functions&lt;/h2&gt;
+&lt;p&gt;You can learn about the function by using the help system. A very nice feature of R is that it documents its functions and that we can call help files.&lt;/p&gt;
+&lt;p&gt;Help files are like user manuals for the functions. You can find:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what the function expects: the arguments&lt;/li&gt;
+&lt;li&gt;what it does (usually the help file will include some useful links and references)&lt;/li&gt;
+&lt;li&gt;what it produces, i.e. what are the outputs of the function&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You get help by using the help function, or for most functions, you can use as a shorthand, which is the question mark followed by the function name.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;help(log)
+? log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, many of the functions contains some example proposed by the developer. You can try out the worked out examples provided, by typing:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;example(log)   # show an example of function log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## log&amp;gt; log(exp(3))
+## [1] 3
+## 
+## log&amp;gt; log10(1e7) # = 7
+## [1] 7
+## 
+## log&amp;gt; x &amp;lt;- 10^-(1+2*1:9)
+## 
+## log&amp;gt; cbind(x, log(1+x), log1p(x), exp(x)-1, expm1(x))
+##           x                                                    
+##  [1,] 1e-03 9.995003e-04 9.995003e-04 1.000500e-03 1.000500e-03
+##  [2,] 1e-05 9.999950e-06 9.999950e-06 1.000005e-05 1.000005e-05
+##  [3,] 1e-07 1.000000e-07 1.000000e-07 1.000000e-07 1.000000e-07
+##  [4,] 1e-09 1.000000e-09 1.000000e-09 1.000000e-09 1.000000e-09
+##  [5,] 1e-11 1.000000e-11 1.000000e-11 1.000000e-11 1.000000e-11
+##  [6,] 1e-13 9.992007e-14 1.000000e-13 9.992007e-14 1.000000e-13
+##  [7,] 1e-15 1.110223e-15 1.000000e-15 1.110223e-15 1.000000e-15
+##  [8,] 1e-17 0.000000e+00 1.000000e-17 0.000000e+00 1.000000e-17
+##  [9,] 1e-19 0.000000e+00 1.000000e-19 0.000000e+00 1.000000e-19
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sometimes, the help system will not suffice to get it right. You can also browse the internet resources for some additional help. It is very likely that someone got the same issues than you before and solved it by requesting help on the available forums !&lt;/p&gt;
+&lt;h2 id=&#34;some-arguments-are-optional&#34;&gt;Some arguments are optional&lt;/h2&gt;
+&lt;p&gt;From looking at the help file for log you can see that the function log expects an &lt;code&gt;x&lt;/code&gt;, a value, and it also expects &lt;code&gt;base&lt;/code&gt;. However, some arguments are &lt;strong&gt;required&lt;/strong&gt;, and others are &lt;strong&gt;optional&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You can determine which arguments are optional by noting in the help document
+that a default value is assigned with the equal sign. For example, the base of the function log defaults to the base &lt;code&gt;exp(1)&lt;/code&gt;. It&amp;rsquo;s the natural log.&lt;/p&gt;
+&lt;p&gt;If you already know how the function works but need a quick reminder of the arguments, you can use the args function.&lt;/p&gt;
+&lt;p&gt;If I type args of log, it shows us the two arguments that it needs.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;args(log)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## function (x, base = exp(1)) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can change the default value by simply assigning another value.
+For example, if instead of natural log we want to get log base 2, we would type, for example, log of 8, and now we change the default of base to 2.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;log(8, base=2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Note that to specify arguments, we use the equal sign. We did not use the assignment argument.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If we read the help file for log, we see that the first argument has a name, too.
+It&amp;rsquo;s x. However, we haven&amp;rsquo;t been using that argument name. We could, though.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how we would do it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;log(x=8, base=2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We get the same answer as if we hadn&amp;rsquo;t used the name x.
+The above code works, but we can save ourselves some time, because if no argument name is used, R assumes you&amp;rsquo;re entering arguments in the order shown in the help file or by args.&lt;/p&gt;
+&lt;p&gt;So by not using the names, R assumes that the arguments are x, and then the next one is base.&lt;/p&gt;
+&lt;h2 id=&#34;operators-are-functions&#34;&gt;Operators are functions&lt;/h2&gt;
+&lt;p&gt;We said that functions need parentheses to be evaluated, but there are some exceptions.
+Among these, the most commonly used are the arithmetic and relational operators.&lt;/p&gt;
+&lt;p&gt;For example, &lt;code&gt;2 ^ 3&lt;/code&gt;, that function that takes 2 to the power of 3 doesn&amp;rsquo;t need a parentheses. We just write it out as we would do in a mathematical formula.&lt;/p&gt;
+&lt;p&gt;You can see the arithmetic operators by looking at the help file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;help(&#39;+&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;additional-resources&#34;&gt;Additional resources&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.statmethods.net/management/functions.html&#34; target=&#34;_blank&#34;&gt;At Quick-R&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Quick-R put up a useful selection of R functions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;../r-functions-used/&#34;&gt;The functions we used&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Our list of functions that were used during the course, and a quick description&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-1-what-are-these-functions-doing&#34;&gt;Ex. 1: What are these functions doing?&lt;/h3&gt;
+&lt;p&gt;Run the following code in the R console and guess what they are doing&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;n &amp;lt;- 1000
+x &amp;lt;- seq(1,n)
+sum(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Possible Answers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sum creates a list of numbers and seq adds them up.&lt;/li&gt;
+&lt;li&gt;seq creates a list of numbers and sum adds them up.&lt;/li&gt;
+&lt;li&gt;seq computes the difference between two arguments and sum computes the + sum of 1 through 1000.&lt;/li&gt;
+&lt;li&gt;sum always returns the same number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Based on the result, what do you think the functions seq and sum do? You can use the help system.&lt;/p&gt;
+&lt;h3 id=&#34;ex-2-nested-functions&#34;&gt;Ex. 2: Nested functions&lt;/h3&gt;
+&lt;p&gt;Use one line of code to compute the log, to the base 10, of the square root of 100. Make sure your code includes the &lt;code&gt;log10()&lt;/code&gt; and &lt;code&gt;sqrt()&lt;/code&gt; functions.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Matrices</title>
+      <link>//localhost:1313/docs/data_structures/matrices/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/data_structures/matrices/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;In this section you will learn about matrices, how to create and manipulate them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#what-is-a-matrix&#34;&gt;What is a matrix? &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#create-a-matrix&#34;&gt;Create a matrix &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#access-elements-of-a-matrix&#34;&gt;Access elements of a matrix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#matrix-calculations&#34;&gt;Matrix calculations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#common-matrix-functions&#34;&gt;Common matrix functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-is-a-matrix&#34;&gt;What is a matrix&lt;/h2&gt;
+&lt;p&gt;A matrix is a collection of data elements &lt;strong&gt;of the same basic type&lt;/strong&gt; arranged in a two-dimensional rectangular layout.&lt;/p&gt;
+&lt;p&gt;\begin{pmatrix}
+x_{11} &amp;amp; x_{12} &amp;amp; x_{13} &amp;amp; \dots  &amp;amp; x_{1n} \\&lt;br&gt;
+x_{21} &amp;amp; x_{22} &amp;amp; x_{23} &amp;amp; \dots  &amp;amp; x_{2n} \\&lt;br&gt;
+\vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\&lt;br&gt;
+x_{d1} &amp;amp; x_{d2} &amp;amp; x_{d3} &amp;amp; \dots  &amp;amp; x_{dn}
+\end{pmatrix}&lt;/p&gt;
+&lt;p&gt;We can create a matrix containing only characters or only logical values. However, it is most common to use matrices containing numeric elements for mathematical calculations.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-matrix&#34;&gt;Create a matrix&lt;/h2&gt;
+&lt;h3 id=&#34;using-the-matrix-function&#34;&gt;Using the &lt;code&gt;matrix()&lt;/code&gt; function&lt;/h3&gt;
+&lt;p&gt;A matrix can be created directly using the &lt;code&gt;matrix(data, nrow, ncol, byrow, dimnames)&lt;/code&gt; function, where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;data&lt;/em&gt; is an input vector which becomes the data elements of the matrix.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;nrow&lt;/em&gt; is the number of rows to be created.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ncol&lt;/em&gt; is the number of columns to be created.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;byrow&lt;/em&gt; is a logical. If TRUE then the input vector elements are arranged by row.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;dimnames&lt;/em&gt; is the names assigned to the rows and columns.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the following example, we are first creating a vector with 12 values that we feed as an argument to the function &lt;code&gt;matrix()&lt;/code&gt;. Note that once I gave the one of the two arguments, nrow or ncol, the other one is deducted by the function.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Elements are arranged sequentially by row.
+# Note: you do not have to enter all the arguments
+ans &amp;lt;- matrix(c(1:12), nrow = 4, byrow = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To see the effect of the argument &lt;code&gt;byrow&lt;/code&gt;, you can compare the above matrix with another matrix where you gave the argument &lt;code&gt;byrow=FALSE&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Be aware that matrix() will only issue a warning if the vector length is not a multiple of the number of rows. In such case, the last row of the matrix will be completed with the first components of the vector: this is very unlikely it was the matrix you wanted to work with.&lt;/p&gt;
+&lt;p&gt;Look at what happens in the following example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Elements are arranged sequentially by row.
+# Note: you do not have to enter all the arguments
+ans &amp;lt;- matrix(c(1:14), nrow = 4, byrow = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in matrix(c(1:14), nrow = 4, byrow = TRUE): data length [14] is not a
+## sub-multiple or multiple of the number of rows [4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ans
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## [2,]    5    6    7    8
+## [3,]    9   10   11   12
+## [4,]   13   14    1    2
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The names of the rows and the columns should appear as a list of two vectors. (more on lists later)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Define the column and row names.
+rownames &amp;lt;- c(&amp;quot;row1&amp;quot;, &amp;quot;row2&amp;quot;, &amp;quot;row3&amp;quot;, &amp;quot;row4&amp;quot;)
+colnames &amp;lt;- c(&amp;quot;col1&amp;quot;, &amp;quot;col2&amp;quot;, &amp;quot;col3&amp;quot;)
+
+matrix(c(1:12), nrow = 4, byrow = TRUE, dimnames = list(rownames, colnames))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      col1 col2 col3
+## row1    1    2    3
+## row2    4    5    6
+## row3    7    8    9
+## row4   10   11   12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;using-cbind-and-rbind-functions&#34;&gt;Using cbind() and rbind() functions&lt;/h3&gt;
+&lt;p&gt;You can also create a matrix by collating (binding) vectors together. Examples below show you different way to create column, row or rectangular matrices with &lt;code&gt;cbind&lt;/code&gt; and &lt;code&gt;rbind&lt;/code&gt; functions.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#create a three columns matrix from a vector
+rbind(1:3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3]
+## [1,]    1    2    3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ans &amp;lt;- cbind(rep(0, 3))
+ans
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1]
+## [1,]    0
+## [2,]    0
+## [3,]    0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can create a rectangular matrix, binding several vectors of the same size&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;cbind(1:3, 4:6, 7:9)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Note that the &lt;code&gt;cbind&lt;/code&gt; and &lt;code&gt;rbind&lt;/code&gt; functions can be used to combine matrices. But you have to make sure the matrices have compatible dimensions&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A &amp;lt;- matrix(1:12, ncol=3); A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3]
+## [1,]    1    5    9
+## [2,]    2    6   10
+## [3,]    3    7   11
+## [4,]    4    8   12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;B &amp;lt;- matrix(1:9, ncol=3); B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# the matrices A and B have the same number of columns
+# you can combine the using rbind()
+rbind(A, B)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3]
+## [1,]    1    5    9
+## [2,]    2    6   10
+## [3,]    3    7   11
+## [4,]    4    8   12
+## [5,]    1    4    7
+## [6,]    2    5    8
+## [7,]    3    6    9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# But it will throw an error if we use cbind
+cbind(A, B)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Error in cbind(A, B): number of rows of matrices must match (see arg 2)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;using-specialized-functions&#34;&gt;Using specialized functions&lt;/h3&gt;
+&lt;p&gt;The function diag() is very handy to create an identity matrix of a given size&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;diag(4)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]    1    0    0    0
+## [2,]    0    1    0    0
+## [3,]    0    0    1    0
+## [4,]    0    0    0    1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;access-elements-of-a-matrix&#34;&gt;Access elements of a matrix&lt;/h2&gt;
+&lt;p&gt;What you&amp;rsquo;ve learned for vectors can be applied for matrices. Just remember that the first index is for the rows, and the second index is for the columns.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ans &amp;lt;- matrix(1:12, nrow = 3)
+ans
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ans[1, 3] # will return the element in row 1 and column 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ans[1,]  #will return the first row
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  1  4  7 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ans[,2] # will return the second column
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4 5 6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ans[, 1:2] #will return the first two columns
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2]
+## [1,]    1    4
+## [2,]    2    5
+## [3,]    3    6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also create a boolean matrix and use it to screen out the elements&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;indices &amp;lt;- ans &amp;gt; 5   #will create a boolean matrix
+indices  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       [,1]  [,2] [,3] [,4]
+## [1,] FALSE FALSE TRUE TRUE
+## [2,] FALSE FALSE TRUE TRUE
+## [3,] FALSE  TRUE TRUE TRUE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ans[indices]  # will return a vector 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  6  7  8  9 10 11 12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;matrix-calculations&#34;&gt;Matrix calculations&lt;/h2&gt;
+&lt;h3 id=&#34;multiplication-by-a-scalar&#34;&gt;Multiplication by a Scalar&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A &amp;lt;- matrix(1:12, ncol=4, byrow=FALSE); A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A * 0.1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]  0.1  0.4  0.7  1.0
+## [2,]  0.2  0.5  0.8  1.1
+## [3,]  0.3  0.6  0.9  1.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;matrix-addition--subtraction&#34;&gt;Matrix Addition &amp;amp; Subtraction&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;B &amp;lt;- matrix(2:13, ncol=4, byrow=FALSE); B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]    2    5    8   11
+## [2,]    3    6    9   12
+## [3,]    4    7   10   13
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A + B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]    3    9   15   21
+## [2,]    5   11   17   23
+## [3,]    7   13   19   25
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A - B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]   -1   -1   -1   -1
+## [2,]   -1   -1   -1   -1
+## [3,]   -1   -1   -1   -1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;element-wise-multiplication&#34;&gt;Element-wise multiplication&lt;/h3&gt;
+&lt;h1 id=&#34;endpmatrix&#34;&gt;[
+&lt;code&gt;\begin{pmatrix} x_{11} &amp;amp; x_{12}  \\ x_{21} &amp;amp; x_{22}   \end{pmatrix}&lt;/code&gt;
+\times
+&lt;code&gt;\begin{pmatrix} y_{11} &amp;amp; y_{12}  \\ y_{21} &amp;amp; y_{22}   \end{pmatrix}&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;\begin{pmatrix} x_{11} \times y_{11} &amp;amp; x_{12} \times y_{12}   \\ x_{21} \times y_{21} &amp;amp; x_{22} \times y_{22}  \end{pmatrix}&lt;/code&gt;
+]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A*B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]    2   20   56  110
+## [2,]    6   30   72  132
+## [3,]   12   42   90  156
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;transpose-of-a-matrix&#34;&gt;Transpose of a matrix&lt;/h3&gt;
+&lt;h1 id=&#34;endpmatrix-1&#34;&gt;\begin{pmatrix}
+x_{11} &amp;amp; x_{12}  \&lt;br&gt;
+x_{21} &amp;amp; x_{22}&lt;br&gt;
+\end{pmatrix}&amp;rsquo;&lt;/h1&gt;
+&lt;p&gt;\begin{pmatrix}
+y_{11} &amp;amp; x_{21}  \&lt;br&gt;
+x_{12} &amp;amp; x_{22}&lt;br&gt;
+\end{pmatrix}&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;BT &amp;lt;- t(B); BT 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3]
+## [1,]    2    3    4
+## [2,]    5    6    7
+## [3,]    8    9   10
+## [4,]   11   12   13
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h3&gt;
+&lt;p&gt;With two conformable matrices, the matrice multiplication is done with the operator &lt;code&gt;%*%&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;endpmatrix-2&#34;&gt;\begin{pmatrix}
+x_{11} &amp;amp; x_{12} &amp;amp; x_{13}  \&lt;br&gt;
+x_{21} &amp;amp; x_{22} &amp;amp; x_{23} 
+\end{pmatrix}
+.
+\begin{pmatrix}
+y_{11} &amp;amp; y_{12}  \&lt;br&gt;
+y_{21} &amp;amp; y_{22}  \&lt;br&gt;
+y_{31} &amp;amp; y_{32}&lt;br&gt;
+\end{pmatrix}&lt;/h1&gt;
+&lt;p&gt;\begin{pmatrix}
+x_{11}.y_{11} + x_{12} . y_{21} + x_{13}.y_{31}  &amp;amp; 
+x_{21}.y_{12} + x_{22}.y_{22} + x_{23}.y_{32}  \\ 
+x_{11}.y_{11} + x_{12}.y_{21} + x_{13}.y_{31} &amp;amp; 
+x_{21}.y_{12} + x_{22}.y_{22} + x_{23}.y_{32}
+\end{pmatrix}&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;BT
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3]
+## [1,]    2    3    4
+## [2,]    5    6    7
+## [3,]    8    9   10
+## [4,]   11   12   13
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A %*% BT
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3]
+## [1,]  188  210  232
+## [2,]  214  240  266
+## [3,]  240  270  300
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This operator also allows the multiplication of a matrix by a vector.&lt;/p&gt;
+&lt;h1 id=&#34;endpmatrix-3&#34;&gt;\begin{pmatrix}
+x_{11} &amp;amp; x_{12}  \&lt;br&gt;
+x_{21} &amp;amp; x_{22}&lt;br&gt;
+\end{pmatrix}
+.
+\begin{pmatrix}
+y_1  \&lt;br&gt;
+y_2&lt;br&gt;
+\end{pmatrix}&lt;/h1&gt;
+&lt;p&gt;\begin{pmatrix}
+x_{11} . y_1 + x_{12} . y_2   \&lt;br&gt;
+x_{21} . y_1 + x_{22} . y_2 
+\end{pmatrix}&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A &amp;lt;- matrix(1:4, ncol=2); A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;V &amp;lt;- c(2,5); V
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A %*% V
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1]
+## [1,]   17
+## [2,]   24
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;common-matrix-functions&#34;&gt;Common matrix functions&lt;/h2&gt;
+&lt;p&gt;For a matrix A&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A &amp;lt;- matrix(seq(2, 8, 2), ncol=2); A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2]
+## [1,]    2    6
+## [2,]    4    8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;number-of-rows-and-columns&#34;&gt;Number of Rows and Columns&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dim(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nrow(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ncol(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;diagonal-elements&#34;&gt;Diagonal elements&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;diag(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2 8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;determinant&#34;&gt;Determinant&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;det(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] -8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;eigenvalues-and-eigenvectors&#34;&gt;Eigenvalues and eigenvectors&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;eigA &amp;lt;- eigen(A); eigA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## eigen() decomposition
+## $values
+## [1] 10.7445626 -0.7445626
+## 
+## $vectors
+##            [,1]       [,2]
+## [1,] -0.5657675 -0.9093767
+## [2,] -0.8245648  0.4159736
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that the output of the function eigen is a list. If you are only interested by the eigenvalues, just use&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;eigA &amp;lt;- eigen(A) 
+eigA$values
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10.7445626 -0.7445626
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;inverse&#34;&gt;Inverse&lt;/h3&gt;
+&lt;p&gt;if A is a regular matrix (square and inversible), the inverse is found using the function &lt;code&gt;solve()&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;invA &amp;lt;- solve(A); invA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1]  [,2]
+## [1,] -1.0  0.75
+## [2,]  0.5 -0.25
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;invA %*% A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2]
+## [1,]    1    0
+## [2,]    0    1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;A %*% invA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2]
+## [1,]    1    0
+## [2,]    0    1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;computing-column-and-row-sums&#34;&gt;Computing Column and Row Sums&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;colSums(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  6 14
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rowSums(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  8 12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sum(A)  #total over all elements
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 20
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Scripts</title>
+      <link>//localhost:1313/docs/get_ready/r-scripts/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/r-scripts/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;If you have sequences of commands to perform, and you want to be able to recreate it later, or to share it with your colleagues, a good idea is to type it into a script.&lt;/p&gt;
+&lt;p&gt;In this section you will learn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;How to create a new script&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How to use (and re-use) a script&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-is-it-a-good-idea&#34;&gt;Why is it a good idea&lt;/h2&gt;
+&lt;p&gt;For example, with the credit example we have been using before, you do not want to type the complicated fixed payment formula each time you want to simulate the money you would have to reimburse.&lt;/p&gt;
+&lt;p&gt;If we go back to our loan example and want to make another simulation with \(N=36\), i.e. simulate the effect of repaying over a longer period, we could just simply redefine \(N\) and use the same code that we wrote before. It would be fine if you just typed that code and you did not close down the R console. However, if you want to do the same exercise tomorrow, you will need to rewrite everything from scratch. One way to avoid this is to save your work into script files.&lt;/p&gt;
+&lt;h2 id=&#34;creating-your-r-script&#34;&gt;Creating your R Script&lt;/h2&gt;
+&lt;p&gt;A &lt;em&gt;R Script file&lt;/em&gt; is just a plain text file containing R commands.&lt;/p&gt;
+&lt;p&gt;By creating and saving a script, like the code used in the previous section, we would not need to retype everything, but we would simply need to open the R script, change the variables according to the new simulation you want to do.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If you&amp;rsquo;re working with the Windows R GUI there is a built-in script editor. To get to it, pull down the File menu and choose New Script. A window will open in which you can type your script.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you&amp;rsquo;re working with R Studio IDE, there is also a built-in script editor. To get to it, pull down the File menu and choose New File and then choose R Script. A new tab will open in the Source pane in which you can type your script. (more on that when we install the R Studio IDE)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Try writing a script into your editor and see how much easier it is to execute the code when you&amp;rsquo;ve already saved a script.&lt;/p&gt;
+&lt;p&gt;Once you opened a new R script file, type the following sequence of commands into the text editor&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;L &amp;lt;- 10000   # L is the amount received Loan
+N &amp;lt;- 24      # N is the number of months
+r &amp;lt;- 6       # r is annual interest rate (expressed in percentage)
+
+# m will calculate the fixed payment due
+m &amp;lt;- L * (r/1200) *(1+r/1200)^N / ((1 + r/1200)^N - 1)  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to run a line of command, select the code you want to run with your mouse and press &lt;code&gt;CTRL + Enter&lt;/code&gt; keys.
+This means you can run part of line, a complete line, or a block of several lines. In the latter case, R will run the command one after another.&lt;/p&gt;
+&lt;h2 id=&#34;include-comments&#34;&gt;Include comments&lt;/h2&gt;
+&lt;p&gt;It is a &lt;strong&gt;good practice to include comments&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;These comments may seem burdersome at first, but you will be very happy to find them when you will open your script in six months from now. Comments are easy to add as they start with a hashtag &lt;code&gt;#&lt;/code&gt;. Text typed after this hastag is not evaluated. We can use this to write reminders of why we wrote the code we wrote. When we read it in the future, we&amp;rsquo;ll be reminded of &lt;strong&gt;why&lt;/strong&gt; we wrote these particular lines of code.&lt;/p&gt;
+&lt;p&gt;Try the code you just typed to make sure that you did not make any mistakes.&lt;/p&gt;
+&lt;p&gt;To do this, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Test your code one line at a time. Go at the end of the line and press &lt;code&gt;CTRL + Enter&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Test several lines of codes: Block the code you want to evaluate and press &lt;code&gt;CTRL + Enter&lt;/code&gt;   (&lt;em&gt;To block the code, locate your mouse at the beginning of the code you want to evaluate, press and hold the &lt;code&gt;SHIFT&lt;/code&gt; key, mouse click at the end of the code to be tested and release the SHIFT key. The code you want to evaluate should be highlighted&lt;/em&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you are satisfied with your work, you can save the script for later use by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Going to the File menu and choose Save, or&lt;/li&gt;
+&lt;li&gt;type Directly &lt;code&gt;CTRL + S&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first time, you are saving the script, a window will ask you where you want to save it and the name of the file you want to use. Choose a directory and a name that carries enough meaning so you can easily retrieve it later on!&lt;/p&gt;
+&lt;h2 id=&#34;using-your-r-script&#34;&gt;Using your R Script&lt;/h2&gt;
+&lt;p&gt;If you have done things correctly, you should be able to solve quickly a credit problem when needed without having to think too much about the formula if we ask you to do so two days (or six months) from now.&lt;/p&gt;
+&lt;p&gt;Follow the following sequence:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open the R scripts you have saved (that&amp;rsquo;s why you need to know where and under what name you saved it!)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change the value according to your new credit problem: for example change the line where \(N\) is defined from \(24\) to \(36\).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Block the code and run it (i.e. press &lt;code&gt;CTRL + Enter&lt;/code&gt; keys)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Et voila!!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;additional-resources&#34;&gt;Additional resources&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=qqz_D1vzS5M&#34; target=&#34;_blank&#34;&gt;R Scripts video&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;This Youtube video gives a well organized description of how to create and use R scripts. The video was developed for Mac users, but you can beneficiate from most of it if you are a Windows user (by just translating &lt;code&gt;Command&lt;/code&gt; into &lt;code&gt;CTRL&lt;/code&gt; for example).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install R Studio</title>
+      <link>//localhost:1313/docs/get_ready/install-r-studio/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/install-r-studio/</guid>
+      <description>&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;
+&lt;p&gt;Below you will find the instructions to install R Studio. As we have already installed R, you can proceed directly to install R Studio. Note that the R Studio may change its websites and download procedures, and I trust you will be able to adjust if this happens!&lt;/p&gt;
+&lt;p&gt;When we last updated this page, here was the procedure:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the 
+&lt;a href=&#34;https://www.rstudio.com/products/rstudio/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rstudio web page&lt;/a&gt;. Scroll down and click on &amp;ldquo;Desktop&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioWeb.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioWeb.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Select DOWNLOAD RSTUDIO DESKTOP&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Download the installer for Windows&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-desktop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload2.png&#34; data-caption=&#34;Choose Desktop&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload2.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose Desktop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Choose the version&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The website should detect the version that best suit your computer.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-choose-the-platform&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioDownload3.png&#34; data-caption=&#34;Choose the platform&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioDownload3.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Choose the platform
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;If you are not satisfied with this choice, you can scroll down and select the version that best suit your needs.&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Save the launcher&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-save-the-launcher&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/RStudioSaveLauncher.png&#34; data-caption=&#34;Save the Launcher&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/RStudioSaveLauncher.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Save the Launcher
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Open and run the file you just downloaded &lt;code&gt;RStudio-1.3.1073.exe&lt;/code&gt; (or the last version at the time of download)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You don&amp;rsquo;t have to change any of the defaults for the installation&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Studio Interface</title>
+      <link>//localhost:1313/docs/get_ready/studio-interface/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/studio-interface/</guid>
+      <description>&lt;p&gt;Once R Studio IDE is installed, the best way to discover R Studio is to follow the first 20 minutes of the introductory video 
+&lt;a href=&#34;https://rstudio.com/resources/webinars/programming-part-1-writing-code-in-rstudio/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Programming - Part 1 (Writing code in RStudio)&lt;/a&gt; developed by R Studio.&lt;/p&gt;
+&lt;p&gt;The video presents the different components of the IDE, and how to make the best use of it.
+(You can skip the installation part of the video)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Packages</title>
+      <link>//localhost:1313/docs/get_ready/r-packages/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/docs/get_ready/r-packages/</guid>
+      <description>&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning objectives&lt;/h2&gt;
+&lt;p&gt;R packages are collections of functions and data sets. They increase the power of R by improving existing base R functionalities, or by adding new ones.&lt;/p&gt;
+&lt;p&gt;In this section, you learn the following about packages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What are packages ?&lt;/li&gt;
+&lt;li&gt;Where can you find packages?&lt;/li&gt;
+&lt;li&gt;How to install packages&lt;/li&gt;
+&lt;li&gt;What are some functions that are related to install.packages() and that you can use to update, remove, … packages?&lt;/li&gt;
+&lt;li&gt;How can you use the user interface to install packages?&lt;/li&gt;
+&lt;li&gt;How do you load packages?&lt;/li&gt;
+&lt;li&gt;How to learn about these packages?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-is-a-package&#34;&gt;What is a package?&lt;/h2&gt;
+&lt;p&gt;A package typically includes code (not only R code!), documentation for the package and for the functions inside, some tests to check everything works as it should, and data sets.&lt;/p&gt;
+&lt;p&gt;The basic information about a package is provided in the DESCRIPTION file, where you can find out what the package does, who the author is, what version the documentation belongs to, the date, the type of license its use, and the package dependencies.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-repositories&#34;&gt;What Are Repositories?&lt;/h2&gt;
+&lt;p&gt;A repository is a place where packages are located so you can install them from it. Typically they are online and accesible to everyone. The most popular repository for R packages is &lt;strong&gt;CRAN&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;CRAN is the official repository, it is a network web servers mantained by the R community around the world. It is coordinated by the R foundation, and for a package to be published here it needs to pass several tests that ensure the package is following CRAN policies.&lt;/p&gt;
+&lt;h2 id=&#34;installing-packages-from-cran&#34;&gt;Installing packages from CRAN&lt;/h2&gt;
+&lt;p&gt;How you can install a package will depend on where it is located. So, for publicly available packages, this means to what repository it belongs.&lt;/p&gt;
+&lt;p&gt;In our case, all the packages we will use are available on the CRAN repository.&lt;/p&gt;
+&lt;p&gt;During the course, we will use extensively the package &lt;code&gt;mlogit&lt;/code&gt;. You will need to install this package on to your computer before you can actually use it. So to install the packages mlogit, simply type:&lt;/p&gt;
+&lt;p&gt;To install this package, you can either do it &amp;ldquo;manually&amp;rdquo; or using the R Studio interface.&lt;/p&gt;
+&lt;p&gt;If you want to do it directly from the console, you can use the command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;install.packages(&amp;quot;mlogit&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After running this, you will receive some messages on screen. They will depend on what operating system you are using, the dependences, and if the package was succesfully installed.&lt;/p&gt;
+&lt;p&gt;With RStudio, you can also use the menu. Follow Tools -&amp;gt; Install Packages&amp;hellip; , and there you will get a pop-up window to select the package you want to install:&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-type-in-the-package-name-you-want-to-install&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/installpackages/installpackages.png&#34; data-caption=&#34;Type in the package name you want to install&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/installpackages/installpackages.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Type in the package name you want to install
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Normally, when you type the first letters, you will be proposed list of package names from which you can select.&lt;/p&gt;
+&lt;p&gt;Once you have selected the package to install, just click the button &lt;code&gt;Install&lt;/code&gt;. You will receive some messages on the screen. They will depend on what operating system you are using, the dependences, and if the package was succesfully installed.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-check-installed-packages-and-update-them&#34;&gt;How to check installed packages and update them&lt;/h2&gt;
+&lt;p&gt;R packages are often updated by their developers. It is possible that sooner than later you will need to update or replace some of the packages.&lt;/p&gt;
+&lt;p&gt;With R Studio, you can keep track of the packages that are already installed on your computer, by clicking on the Packages tab of the Files, Plots, Packages, Help, Viewer Pane.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-update-packages-with-r-studio&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/installpackages/update-packages.png&#34; data-caption=&#34;Update packages with R Studio&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/installpackages/update-packages.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Update packages with R Studio
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Once you do that, you will see a list of installed packgages, and have the possibility to update them. It is a good idea to update the packages once a month.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-load-packages&#34;&gt;How To Load Packages&lt;/h2&gt;
+&lt;p&gt;After a package is installed, you are ready to use its functionalities. 
+To do so, you will need to load it into the computer memory. The simplest way to do this is with the &lt;code&gt;library()&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;The packages is loaded into the memory, and a few messages are sent to confirm that the packages is loaded, and some additional messages. Note that these messages will be in red color even if everything went fine!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(mlogit)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: dfidx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &#39;dfidx&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note also that the input of &lt;code&gt;install.packages()&lt;/code&gt; is a character vector and requires the name to be in quotes, while &lt;code&gt;library()&lt;/code&gt; accepts either character or name and makes it possible for you to write the name of the package without quotes.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-unload-a-package&#34;&gt;How To Unload A Package&lt;/h2&gt;
+&lt;p&gt;To unload a given package you can use the detach() function. The use will be:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;detach(&amp;quot;package:mlogit&amp;quot;, unload=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;how-to-get-help-about-the-package&#34;&gt;How to get help about the package&lt;/h2&gt;
+&lt;h3 id=&#34;help-files&#34;&gt;Help files&lt;/h3&gt;
+&lt;p&gt;As in basic R, the commands ?() and help(), are the first source of documentation when you are starting with a package.&lt;/p&gt;
+&lt;p&gt;You can get a general overview of the package using help(package = &amp;ldquo;packagename&amp;rdquo;). Besides each function can be explored individually by help(&amp;ldquo;name of the function&amp;rdquo;) or help(function, package = &amp;ldquo;package&amp;rdquo;) if the package has not been loaded, where you will typically find the description of the function and its parameters and an example of application.&lt;/p&gt;
+&lt;p&gt;Tip: you can also use another way to see what is inside a loaded package. Use the ls() command in this way:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(mlogit)
+ls(&amp;quot;package:mlogit&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;cor.mlogit&amp;quot;            &amp;quot;cov.mlogit&amp;quot;            &amp;quot;drpar&amp;quot;                
+##  [4] &amp;quot;has.intercept&amp;quot;         &amp;quot;hmftest&amp;quot;               &amp;quot;index&amp;quot;                
+##  [7] &amp;quot;is.mFormula&amp;quot;           &amp;quot;logsum&amp;quot;                &amp;quot;lrtest&amp;quot;               
+## [10] &amp;quot;med&amp;quot;                   &amp;quot;mFormula&amp;quot;              &amp;quot;mlogit&amp;quot;               
+## [13] &amp;quot;mlogit.data&amp;quot;           &amp;quot;mlogit.optim&amp;quot;          &amp;quot;model.response.mlogit&amp;quot;
+## [16] &amp;quot;prpar&amp;quot;                 &amp;quot;qrpar&amp;quot;                 &amp;quot;rg&amp;quot;                   
+## [19] &amp;quot;rpar&amp;quot;                  &amp;quot;scoretest&amp;quot;             &amp;quot;stdev&amp;quot;                
+## [22] &amp;quot;waldtest&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;vignettes&#34;&gt;Vignettes&lt;/h3&gt;
+&lt;p&gt;The vignettes are documents where the authors show some functionalities of their package in a more detailed way. Following vignettes is a great way start to start working with it before doing your own analysis.&lt;/p&gt;
+&lt;p&gt;They are usually accessible at the top of the package help file.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-vignettes-provides-package-documentation&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;//localhost:1313/media/installpackages/vignettes.png&#34; data-caption=&#34;Vignettes provides package documentation&#34;&gt;
+
+
+  &lt;img src=&#34;//localhost:1313/media/installpackages/vignettes.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Vignettes provides package documentation
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;You can also browse directly the vignettes available using:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;browseVignettes(package=&amp;quot;mlogit&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A browser window will open so you can easily explore and click on the preferred vignette to open it.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

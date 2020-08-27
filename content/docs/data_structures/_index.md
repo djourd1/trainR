@@ -12,4 +12,17 @@ date: "2020-08-20T00:00:00Z"
 type: book  
 ---
 
-At the end of the session ...
+In this section, we will learn about the data that R can store and process. 
+
+* What are the {{% staticref "docs/data_structures/basic-data-types/" %}}basic data types{{% /staticref %}} in R
+
+* How to combine these data into: 
+  + {{% staticref "docs/data_structures/vectors/" %}}Vectors{{% /staticref %}} or {{% staticref "docs/data_structures/matrices/" %}}Matrices{{% /staticref %}} when data are of the same types
+  + {{% staticref "docs/data_structures/lists/" %}}Lists{{% /staticref %}} or {{% staticref "docs/data_structures/r-data-frames/" %}}Data frames{{% /staticref %}} when data are of different types
+
+* How to create and play with such structures  
+
+* How to {{% staticref "docs/data_structures/import-data/" %}}Import data{{% /staticref %}}  you have stored in other formats, especially text or excel formats. 
+  
+
+

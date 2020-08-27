@@ -1,0 +1,1104 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learning objectives In this section you will learn about vectors, how to create different types of vector, and how to manipulate them.
+  Numeric Vectors: Definition and Creation   Generating regular sequences    The : operator  The seq() function  The rep() function    Vector Arithmetic  Useful functions applied to a vector  Vectors with other types of data  Automatic coercing within vectors  Numeric vectors R operates on named data structures.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="//localhost:1313/docs/data_structures/vectors/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="//localhost:1313/docs/data_structures/vectors/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Learning R">
+  <meta property="og:url" content="//localhost:1313/docs/data_structures/vectors/">
+  <meta property="og:title" content="Vectors | Learning R">
+  <meta property="og:description" content="Learning objectives In this section you will learn about vectors, how to create different types of vector, and how to manipulate them.
+  Numeric Vectors: Definition and Creation   Generating regular sequences    The : operator  The seq() function  The rep() function    Vector Arithmetic  Useful functions applied to a vector  Vectors with other types of data  Automatic coercing within vectors  Numeric vectors R operates on named data structures."><meta property="og:image" content="//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png">
+  <meta property="twitter:image" content="//localhost:1313/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_300x300_fit_lanczos_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-02-27T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-02-27T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Vectors | Learning R</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_0x70_resize_lanczos_2.png" alt="Learning R"></a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_0x70_resize_lanczos_2.png" alt="Learning R"></a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/docs/"><span>Documentation</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/docs/">Docs</a></li>
+    
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/get_ready/"><i class="fas fa-book pr-1"></i>Getting Ready</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/get_ready/why-r/">Why R ?</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-motivation/">Tips for Learning R</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/install-r-on-windows/">Install R on Windows</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-objects/">R Objects</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-functions/">R Functions</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/install-r-studio/">Install R Studio</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/studio-interface/">Studio Interface</a></li>
+
+
+
+  <li class=""><a href="/docs/get_ready/r-packages/">R Packages</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/data_structures/"><i class="fas fa-book pr-1"></i>Data Structures</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/data_structures/basic-data-types/">Basic Data Types</a></li>
+
+
+
+  <li class="active"><a href="/docs/data_structures/vectors/">Vectors</a></li>
+
+
+
+  <li class=""><a href="/docs/data_structures/matrices/">Matrices</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#learning-objectives">Learning objectives</a></li>
+    <li><a href="#numeric-vectors">Numeric vectors</a></li>
+    <li><a href="#generating-regular-sequences">Generating regular sequences</a>
+      <ul>
+        <li><a href="#the-colon-operator-">The colon operator <code>:</code></a></li>
+        <li><a href="#the-seq-function">The <code>seq()</code> function</a></li>
+        <li><a href="#the-rep-function">The <code>rep()</code> function</a></li>
+      </ul>
+    </li>
+    <li><a href="#vector-arithmetic">Vector arithmetic</a></li>
+    <li><a href="#useful-functions-applied-to-a-vector">Useful functions applied to a vector</a></li>
+    <li><a href="#vectors-with-other-types-of-data">Vectors with other types of data</a></li>
+    <li><a href="#automatic-coercing-within-vectors">Automatic coercing within vectors</a></li>
+    <li><a href="#index-vectors-to-obtain-subsets-of-a-vector">Index vectors to obtain subsets of a vector</a>
+      <ul>
+        <li><a href="#index--a-logical-vector">Index = A logical vector.</a></li>
+        <li><a href="#index--a-vector-of-integers">Index = A vector of integers.</a></li>
+        <li><a href="#index--a-vector-of-negative-integers">Index = A vector of negative Integers</a></li>
+        <li><a href="#index--a-vector-of-character-strings">Index = A vector of character strings.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Vectors</h1>
+
+          <div class="article-style">
+            <h2 id="learning-objectives">Learning objectives</h2>
+<p>In this section you will learn about vectors, how to create different types of vector, and how to manipulate them.</p>
+<ul>
+<li>
+<a href="#numeric-vectors">Numeric Vectors: Definition and Creation </a></li>
+<li>
+<a href="#generating-regular-sequences">Generating regular sequences </a>
+<ul>
+<li>
+<a href="#the-colon-operator">The : operator</a></li>
+<li>
+<a href="#the-seq-function">The seq() function</a></li>
+<li>
+<a href="#the-rep-function">The rep() function</a></li>
+</ul>
+</li>
+<li>
+<a href="#vector-arithmetic">Vector Arithmetic</a></li>
+<li>
+<a href="#useful-functions-applied-to-a-vector">Useful functions applied to a vector</a></li>
+<li>
+<a href="#vectors-with-other-types-of-data">Vectors with other types of data</a></li>
+<li>
+<a href="#automatic-coercing-within-vectors">Automatic coercing within vectors</a></li>
+</ul>
+<h2 id="numeric-vectors">Numeric vectors</h2>
+<p>R operates on named data structures. The simplest data structure is the numeric vector: a single entity consisting of an <em>ordered collection of numbers</em>.</p>
+<p>To set up a vector, we use the R function <code>c()</code> which, in this context, can take an arbitrary number of arguments:</p>
+<pre><code class="language-r">x &lt;- c(10.4, 5.6, 3.1, 6.4, 21.7)
+x
+</code></pre>
+<pre><code>## [1] 10.4  5.6  3.1  6.4 21.7
+</code></pre>
+<pre><code class="language-r">class(x)
+</code></pre>
+<pre><code>## [1] &quot;numeric&quot;
+</code></pre>
+<p>You can also use the function <code>c()</code> to concatenate several existing vectors</p>
+<pre><code class="language-r">x &lt;- c(10.4, 5.6, 3.1 )
+y &lt;- c(2,3,4)
+z &lt;- c(x,y)
+z
+</code></pre>
+<pre><code>## [1] 10.4  5.6  3.1  2.0  3.0  4.0
+</code></pre>
+<pre><code class="language-r">class(z)
+</code></pre>
+<pre><code>## [1] &quot;numeric&quot;
+</code></pre>
+<h2 id="generating-regular-sequences">Generating regular sequences</h2>
+<p>R has also a number of built-in functions for generating commonly used sequences of numbers.</p>
+<h3 id="the-colon-operator-">The colon operator <code>:</code></h3>
+<p>The <code>:</code>  creates regular sequence of integers. Its syntax is quite intuite: to create a regular sequence of integers from 1 to 10, just type:</p>
+<pre><code class="language-r">1:10
+</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre>
+<pre><code class="language-r">15:5
+</code></pre>
+<pre><code>##  [1] 15 14 13 12 11 10  9  8  7  6  5
+</code></pre>
+<p>The colon operator has high priority within an expression. Check the results of the following expressions to understand the order in which the operators are working:</p>
+<pre><code class="language-r">2*1:15
+</code></pre>
+<pre><code>##  [1]  2  4  6  8 10 12 14 16 18 20 22 24 26 28 30
+</code></pre>
+<pre><code class="language-r">n &lt;- 10
+1:n-1
+</code></pre>
+<pre><code>##  [1] 0 1 2 3 4 5 6 7 8 9
+</code></pre>
+<pre><code class="language-r">1:(n-1)
+</code></pre>
+<pre><code>## [1] 1 2 3 4 5 6 7 8 9
+</code></pre>
+<h3 id="the-seq-function">The <code>seq()</code> function</h3>
+<p>The function seq() is more general. 
+It has five arguments, only some of which may be specified in any one call. Consult the help file for more details. Look at the few examples to understand the function seq()</p>
+<pre><code class="language-r">seq(1, 2, by=.2) 
+</code></pre>
+<pre><code>## [1] 1.0 1.2 1.4 1.6 1.8 2.0
+</code></pre>
+<pre><code class="language-r">seq(length=10, from =-1, by=2)
+</code></pre>
+<pre><code>##  [1] -1  1  3  5  7  9 11 13 15 17
+</code></pre>
+<h3 id="the-rep-function">The <code>rep()</code> function</h3>
+<p>The function rep() can be used for replicating an object in several ways and creating vectors.</p>
+<p>To put, several copies end-to-end, use the argument <code>times</code>:</p>
+<pre><code class="language-r">x &lt;- c(1.34, 2.56)
+(s5 &lt;- rep(x, times=5))
+</code></pre>
+<pre><code>##  [1] 1.34 2.56 1.34 2.56 1.34 2.56 1.34 2.56 1.34 2.56
+</code></pre>
+<p>To repeat each element of x five times before moving on to the next, use the argument <code>each</code>:</p>
+<pre><code class="language-r">(s6 &lt;- rep(x, each=3))
+</code></pre>
+<pre><code>## [1] 1.34 1.34 1.34 2.56 2.56 2.56
+</code></pre>
+<h2 id="vector-arithmetic">Vector arithmetic</h2>
+<p>Vectors can be used in arithmetic expressions, in which case the operations are performed <strong>element by element</strong>.</p>
+<p>For example, if you add two vectors:</p>
+<p>\begin{equation}
+\left(\begin{matrix}a\\b\\c\\d \end{matrix} \right)  + 
+\left(\begin{matrix}e\\f\\g\\h  \end{matrix} \right) =
+\left(\begin{matrix}a+e\\b+f\\c+g\\d+h \end{matrix} \right) 
+\end{equation}</p>
+<p>In R:</p>
+<pre><code class="language-r">x &lt;- c(10.4, 5.6, 3.4)
+y &lt;- c(3.1, 6.4, -2.1)
+(z &lt;- x + y)
+</code></pre>
+<pre><code>## [1] 13.5 12.0  1.3
+</code></pre>
+<p>However, vectors occurring in the same expression do not need to be of the same length. If they are not, the value of the expression is a vector with the same length as the longest vector which occurs in the expression. Shorter vectors in the expression are recycled as often as need be (perhaps fractionally) until they match the length of the longest vector. 
+In particular a constant is simply repeated.</p>
+<p>For example: 
+\begin{equation}
+\left(\begin{matrix}a\\b\\c \end{matrix} \right)  +  e =
+\left(\begin{matrix}a+e\\b+e\\c+e \end{matrix} \right) 
+\end{equation}</p>
+<pre><code class="language-r">x &lt;- c(10.4, 5.6)
+y &lt;- 3.1
+(z &lt;- x + y)
+</code></pre>
+<pre><code>## [1] 13.5  8.7
+</code></pre>
+<div class="alert alert-warning">
+  <div>
+    <p>While this is a very convenient R feature, it can be potentially misleading as it brings unruly results when the vectors are of different length, as in the following case:</p>
+<p>\begin{equation}
+\left(\begin{matrix}a\\b\\c\\d \end{matrix} \right)  +<br>
+\left(\begin{matrix}e\\f\\g \end{matrix} \right) =
+\left(\begin{matrix}a+e\\b+f\\c+g\\d+e \end{matrix} \right) 
+\end{equation}</p>
+  </div>
+</div>
+<pre><code class="language-r">x &lt;- c(10.4, 5.6, 3.5)
+y &lt;- c(1,2)
+z &lt;- x + y
+</code></pre>
+<pre><code>## Warning in x + y: longer object length is not a multiple of shorter object
+## length
+</code></pre>
+<pre><code class="language-r">z
+</code></pre>
+<pre><code>## [1] 11.4  7.6  4.5
+</code></pre>
+<p>Just to remind you of the potential danger, R will throw a warning message</p>
+<p>The elementary arithmetic operators are the usual +, -, *, / and ^ for raising to a power. In addition all of the common arithmetic functions are available. <code>log</code>, <code>exp</code>, <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>sqrt</code> and so on, all have their usual meaning.</p>
+<pre><code class="language-r">x &lt;- c(10.4, 5.6, 3.5)
+log(x)
+</code></pre>
+<pre><code>## [1] 2.341806 1.722767 1.252763
+</code></pre>
+<p><code>max</code> and <code>min</code> select the largest and smallest elements of a vector respectively.</p>
+<pre><code class="language-r">min(x)
+</code></pre>
+<pre><code>## [1] 3.5
+</code></pre>
+<h2 id="useful-functions-applied-to-a-vector">Useful functions applied to a vector</h2>
+<p>Several functions are very useful for basic statistics.</p>
+<p>The <code>sum()</code> function, sums up all the elements of the vector. The <code>mean()</code> function calculates the mean value of all the elements of the vector. We can combine vector arithmetics with these functions to calculate very quickly some interesting statistics of the vector.</p>
+<pre><code class="language-r">x &lt;- c(10.4, 5.6, 3.5, 3.1, 7.2, 3.8, 10.2, 7.8)
+mean(x)
+</code></pre>
+<pre><code>## [1] 6.45
+</code></pre>
+<pre><code class="language-r">x - mean(x)  #calculate the deviation from the mean
+</code></pre>
+<pre><code>## [1]  3.95 -0.85 -2.95 -3.35  0.75 -2.65  3.75  1.35
+</code></pre>
+<p>We can calculate easily the sample variance 
+$$ var(x) = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2 $$</p>
+<pre><code class="language-r">x &lt;- c(10.4, 5.6, 3.5, 3.1, 7.2, 3.8, 10.2, 7.8)
+mean(x)
+</code></pre>
+<pre><code>## [1] 6.45
+</code></pre>
+<pre><code class="language-r">v&lt;- sum((x - mean(x))^2) / (length(x)-1)  #calculate the variance
+v
+</code></pre>
+<pre><code>## [1] 8.531429
+</code></pre>
+<pre><code class="language-r">var(x)
+</code></pre>
+<pre><code>## [1] 8.531429
+</code></pre>
+<p>Note that base R already has a built-in function for calculating the sample variance <code>var()</code>.</p>
+<h2 id="vectors-with-other-types-of-data">Vectors with other types of data</h2>
+<p>Vectors can contain other types of data, in particular characters and logicals.</p>
+<p>The elements of a logical vector can have the values <code>TRUE</code>, <code>FALSE</code>, and <code>NA</code> (for &ldquo;not available&rdquo;). The first two are often abbreviated as T and F, respectively. Note however that T and F are just variables which are set to TRUE and FALSE by default, but are not reserved words and hence can be overwritten by the user. <strong>Hence, it is better to always use TRUE and FALSE.</strong></p>
+<h2 id="automatic-coercing-within-vectors">Automatic coercing within vectors</h2>
+<p>In general, coercion is an attempt by R to be flexible with data types. When an entry does not match the expected type, R tries to guess what we meant. But this can also lead to confusion.</p>
+<p>We earlier said that vectors must be all of the same type.
+So if we try to combine say numbers and characters, you might expect an error. But let&rsquo;s try to combine numeric and characters in the same vector:</p>
+<pre><code class="language-r">c(1, &quot;South Africa&quot;, 3, &quot;England&quot;)
+</code></pre>
+<pre><code>## [1] &quot;1&quot;            &quot;South Africa&quot; &quot;3&quot;            &quot;England&quot;
+</code></pre>
+<p>We do not even get a warning !! So what has happened?</p>
+<p>R has converted the 1 and the 3 to character strings. And the class of the vector is character. Even though 1 and 3 were originally numbers when we wrote it out, R has converted them to character.</p>
+<p><em>R coerced the data into a character string.</em> It guessed that because we put a character string there in the middle, we meant the 1 and the 3 to actually also be character strings.</p>
+<p>Again, be aware that R will coerce variables without any warning !
+It will only throw an error, when it attemps to coerce a variable into a new type, but cannot do it.</p>
+<h2 id="index-vectors-to-obtain-subsets-of-a-vector">Index vectors to obtain subsets of a vector</h2>
+<p>Subsets of the elements of a vector may be selected by appending to the name of the vector an <em>index vector</em> in square brackets. More generally any expression that evaluates to a vector may have subsets of its elements similarly selected by appending an index vector in square brackets immediately after the expression.</p>
+<p>Such index vectors can be any of four distinct types.</p>
+<h3 id="index--a-logical-vector">Index = A logical vector.</h3>
+<p>In this case the index vector is recycled to the same length as the vector from which elements are to be selected. Values corresponding to TRUE in the index vector are selected and those corresponding to FALSE are omitted. For example, the following lines reates (or re-creates) an object `yv which will contain the values of x greater than 4, in the same order.</p>
+<pre><code class="language-r">y &lt;- x[x &gt; 4]
+y
+</code></pre>
+<pre><code>## [1] 10.4  5.6  7.2 10.2  7.8
+</code></pre>
+<h3 id="index--a-vector-of-integers">Index = A vector of integers.</h3>
+<p>In this case the values in the index vector must lie in the set {1, 2, …, length(x)}. The corresponding elements of the vector are selected and concatenated, in that order, in the result. The index vector can be of any length and the result is of the same length as the index vector.</p>
+<pre><code class="language-r">x &lt;- rnorm(20)
+(y &lt;- x[1:10])
+</code></pre>
+<pre><code>##  [1]  0.09220648  1.12491187  0.53665207  1.81840151 -0.38831663  0.06935517
+##  [7] -2.59814157 -0.20936368  0.94048022 -0.27008015
+</code></pre>
+<pre><code class="language-r">(z &lt;- x[c(1,3,2,7)])
+</code></pre>
+<pre><code>## [1]  0.09220648  0.53665207  1.12491187 -2.59814157
+</code></pre>
+<p>The use of index vectors can be very powerful to create complex sequences:</p>
+<pre><code class="language-r">c(&quot;x&quot;,&quot;y&quot;)[rep(c(1,2,2,1), times=2)]
+</code></pre>
+<pre><code>## [1] &quot;x&quot; &quot;y&quot; &quot;y&quot; &quot;x&quot; &quot;x&quot; &quot;y&quot; &quot;y&quot; &quot;x&quot;
+</code></pre>
+<h3 id="index--a-vector-of-negative-integers">Index = A vector of negative Integers</h3>
+<p>Such an index vector specifies the values <em>to be excluded</em> rather than included. Thus:</p>
+<pre><code class="language-r">x[-(1:5)]  # gives y all but the first five elements of x.
+</code></pre>
+<pre><code>##  [1]  0.06935517 -2.59814157 -0.20936368  0.94048022 -0.27008015  1.94953530
+##  [7] -1.46875658  1.35834277 -1.23067250 -0.54102607 -0.55928871  0.62858631
+## [13] -0.97861047  0.98952395 -1.33371635
+</code></pre>
+<h3 id="index--a-vector-of-character-strings">Index = A vector of character strings.</h3>
+<p>This possibility only applies where an object has a names attribute to identify its components. In this case a sub-vector of the names vector may be used in the same way as the positive integral labels in item 2 further above.</p>
+<pre><code class="language-r">fruit &lt;- c(5, 10, 1, 20)
+names(fruit) &lt;- c(&quot;orange&quot;, &quot;banana&quot;, &quot;apple&quot;, &quot;peach&quot;)
+lunch &lt;- fruit[c(&quot;apple&quot;,&quot;orange&quot;)]
+lunch
+</code></pre>
+<pre><code>##  apple orange 
+##      1      5
+</code></pre>
+<p>Note in this case, that we added a feature to the vector, because each element of the vector is associated with a name. This is obtained by using the function <code>names()</code>.</p>
+<p>The advantage is that alphanumeric names are often easier to remember than numeric indices.</p>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/docs/data_structures/basic-data-types/" rel="next">Basic Data Types</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/docs/data_structures/matrices/" rel="prev">Matrices</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 27, 2019</p>
+
+          
+
+
+
+
+
+          
+
+
+          
+
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Website Builder</a>
+    
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

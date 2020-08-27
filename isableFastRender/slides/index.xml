@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides | Learning R</title>
+    <link>//localhost:1313/slides/</link>
+      <atom:link href="//localhost:1313/slides/index.xml" rel="self" type="application/rss+xml" />
+    <description>Slides</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <item>
+      <title>Slides</title>
+      <link>//localhost:1313/slides/why-r-slides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/slides/why-r-slides/</guid>
+      <description>&lt;h1 id=&#34;why-we-will-use-r&#34;&gt;Why we will use R?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-r-&#34;&gt;What is R ?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;R is an interactive environment for data analysis&lt;/li&gt;
+&lt;li&gt;Developed by statisticians and data analysts&lt;/li&gt;
+&lt;li&gt;R is also a programming language, e.g., you can save your work in &lt;em&gt;scripts&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;r-is-popular&#34;&gt;R is popular&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-r-is-popular-&#34;&gt;Why R is popular ?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;R is free !&lt;/li&gt;
+&lt;li&gt;R is &lt;em&gt;open source&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;R runs across all major platforms: Windows, Mac OS, Unix, Linux.&lt;/li&gt;
+&lt;li&gt;R enables developers to share programs using &lt;em&gt;packages&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;many-resources-for-learning&#34;&gt;Many resources for learning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Numerous resources for learning (online tutorials, courses, books, etc.)&lt;/li&gt;
+&lt;li&gt;Large user community: easy to find solutions to your problems (forums)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
