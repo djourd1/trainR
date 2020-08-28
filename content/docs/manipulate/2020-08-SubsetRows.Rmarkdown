@@ -2,7 +2,7 @@
 title: "Subsetting rows" 
 author: Damien Jourdain
 date: '2020-03-02'
-slug: subset
+slug: subsetrows
 output: 
   bookdown::pdf_document2:
     fig_caption: yes
@@ -144,8 +144,7 @@ Finally, remember that R either prints out the results, or saves them to a varia
 (virg6 <- fish %>% filter(Species=="virginica" & Petal.Length >=6) %>% slice_head(n=3))
 ```
 
-
-
+## This is just the start !
 
 {{% alert note %}}
 
@@ -159,7 +158,6 @@ Finally, as it might be a bit difficult to remember or understand the syntax, as
 As a start, when faced with a problem or an error I cannot solve, I usually use Google!
 
 {{% /alert %}}
-
 
 
 ## Exercise

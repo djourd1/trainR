@@ -24,5 +24,5 @@ In this section, we will learn about the data that R can store and process.
 
 * How to {{% staticref "docs/data_structures/import-data/" %}}Import data{{% /staticref %}}  you have stored in other formats, especially text or excel formats. 
   
-
+ 
 

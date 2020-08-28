@@ -1,0 +1,56 @@
+---
+title: "Sorting rows" 
+author: Damien Jourdain
+date: '2020-03-02'
+slug: sortrows
+output: 
+  bookdown::pdf_document2:
+    fig_caption: yes
+    toc: yes
+  bookdown::html_document2:
+    fig_caption: yes
+categories:
+  - R
+tags: []
+type: book
+weight: 3
+---
+
+```{r, echo=FALSE, warning=FALSE,message=FALSE}
+library(readxl)
+library(tidyverse)
+fish <- read_excel("datasets.xlsx")
+fish$ID <- 1:nrow(fish)
+```
+
+
+Now that you are familiar with dplyr commands and the pipe syntax, we will continue our possible data manipulations.
+
+A second type of manipulation is the ordering of your data. 
+
+For this, we will use the command `arrange()`.
+
+arrange() changes the order of the rows. The argument is a  set of column names to order by. 
+
+```{r}
+fish %>% arrange(Species)
+```
+
+If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns.
+
+```{r}
+fish %>% arrange(Species, Petal.Width)
+```
+
+Use desc() to re-order by a column in descending order:
+
+```{r}
+fish %>% arrange(desc(Species), Petal.Width)
+```
+
+Just to get familiar with the pipes, you can take a random sample of size 15 of the fish data set and then order it by the Petal.Width. For equal Petal.Width, order it by Species.
+
+```{r}
+fish %>% slice_sample(n=15) %>% arrange(Petal.Width, Species)
+```
+

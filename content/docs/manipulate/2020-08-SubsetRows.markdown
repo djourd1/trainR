@@ -2,7 +2,7 @@
 title: "Subsetting rows" 
 author: Damien Jourdain
 date: '2020-03-02'
-slug: subset
+slug: subsetrows
 output: 
   bookdown::pdf_document2:
     fig_caption: yes
@@ -94,16 +94,16 @@ fish_sample
 ## # A tibble: 10 x 6
 ##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species       ID
 ##           <dbl>       <dbl>        <dbl>       <dbl> <chr>      <int>
-##  1          5.5         2.5          4           1.3 versicolor    90
-##  2          7.1         3            5.9         2.1 virginica    103
-##  3          6.9         3.1          4.9         1.5 versicolor    53
-##  4          6.4         2.8          5.6         2.2 virginica    133
-##  5          6           2.7          5.1         1.6 versicolor    84
-##  6          5.6         3            4.5         1.5 versicolor    67
-##  7          5.2         3.5          1.5         0.2 setosa        28
-##  8          5.1         3.8          1.6         0.2 setosa        47
-##  9          4.7         3.2          1.3         0.2 setosa         3
-## 10          5.7         2.5          5           2   virginica    114
+##  1          5.7         3            4.2         1.2 versicolor    96
+##  2          5.4         3            4.5         1.5 versicolor    85
+##  3          5.8         2.7          3.9         1.2 versicolor    83
+##  4          6.8         2.8          4.8         1.4 versicolor    77
+##  5          6.7         2.5          5.8         1.8 virginica    109
+##  6          6           2.2          4           1   versicolor    63
+##  7          6.9         3.2          5.7         2.3 virginica    121
+##  8          4.9         3.6          1.4         0.1 setosa        38
+##  9          5.7         2.8          4.5         1.3 versicolor    56
+## 10          7.2         3            5.8         1.6 virginica    130
 ```
 
 ## Subsetting rows based on logical criteria
@@ -242,8 +242,7 @@ Finally, remember that R either prints out the results, or saves them to a varia
 (virg6 <- fish %>% filter(Species=="virginica" & Petal.Length >=6) %>% slice_head(n=3))
 ```
 
-
-
+## This is just the start !
 
 {{% alert note %}}
 
@@ -257,7 +256,6 @@ Finally, as it might be a bit difficult to remember or understand the syntax, as
 As a start, when faced with a problem or an error I cannot solve, I usually use Google!
 
 {{% /alert %}}
-
 
 
 ## Exercise
