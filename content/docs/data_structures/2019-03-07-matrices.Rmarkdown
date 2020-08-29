@@ -82,6 +82,13 @@ colnames <- c("col1", "col2", "col3")
 matrix(c(1:12), nrow = 4, byrow = TRUE, dimnames = list(rownames, colnames))
 ```
 
+Finally, note that the function matrix can be used to create a "blank" matrix, i.e. a matrix filled with `NA` with the following instructions:
+```{r}
+matrix(, nrow = 2, ncol = 4)
+```
+
+
+
 ### Using cbind() and rbind() functions
 
 You can also create a matrix by collating (binding) vectors together. Examples below show you different way to create column, row or rectangular matrices with `cbind` and `rbind` functions.  

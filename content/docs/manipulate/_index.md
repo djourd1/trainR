@@ -1,6 +1,6 @@
 ---
 # Title, summary, and page position.
-linktitle: Manipulate Data
+linktitle: Manipulate your data
 summary: Manipulate your data
 weight: 3
 icon: book
@@ -23,6 +23,7 @@ To manipulate data, you have different options. Among them, 3 environments are p
 + The tidyverse ecosystem
 
 We have opted for the third one as it provides a consistent framework to work with and is relatively easy to learn.
+
 
 
 

@@ -19,13 +19,11 @@ weight: 3
 
 
 
-Now that you are familiar with dplyr commands and the pipe syntax, we will continue our possible data manipulations.
+You are now familiar with `dplyr` commands and the pipe syntax.
 
-A second type of manipulation is the ordering of your data. 
+A second type of manipulation is the ordering of your data. For this, we will use the command `arrange()`.
 
-For this, we will use the command `arrange()`.
-
-arrange() changes the order of the rows. The argument is a  set of column names to order by. 
+The command `arrange()` changes the order of the rows. Beside the name of the dataset, the argument is a set of column names to order by. 
 
 
 ```r
@@ -49,7 +47,7 @@ fish %>% arrange(Species)
 ## # ... with 140 more rows
 ```
 
-If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns.
+If you provide more than one column name, the column names are separated with commas.Each additional column will be used to break ties in the values of preceding columns. 
 
 
 ```r
@@ -101,27 +99,29 @@ Just to get familiar with the pipes, you can take a random sample of size 15 of 
 
 
 ```r
-fish %>% slice_sample(n=15) %>% arrange(Petal.Width, Species)
+fish %>% 
+  slice_sample(n=15) %>%
+  arrange(Petal.Width, Species)
 ```
 
 ```
 ## # A tibble: 15 x 6
 ##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species       ID
 ##           <dbl>       <dbl>        <dbl>       <dbl> <chr>      <int>
-##  1          5.2         4.1          1.5         0.1 setosa        33
-##  2          5           3.2          1.2         0.2 setosa        36
-##  3          5.1         3.8          1.6         0.2 setosa        47
-##  4          5           3.3          1.4         0.2 setosa        50
-##  5          5.1         3.7          1.5         0.4 setosa        22
-##  6          5.4         3.9          1.3         0.4 setosa        17
-##  7          6           2.2          4           1   versicolor    63
-##  8          5.1         2.5          3           1.1 versicolor    99
-##  9          5.6         2.5          3.9         1.1 versicolor    70
-## 10          5.8         2.6          4           1.2 versicolor    93
-## 11          5.5         2.5          4           1.3 versicolor    90
-## 12          6.8         2.8          4.8         1.4 versicolor    77
-## 13          6.3         2.9          5.6         1.8 virginica    104
-## 14          7.6         3            6.6         2.1 virginica    106
-## 15          6.9         3.2          5.7         2.3 virginica    121
+##  1          4.8         3            1.4         0.1 setosa        13
+##  2          4.9         3.6          1.4         0.1 setosa        38
+##  3          5.2         4.1          1.5         0.1 setosa        33
+##  4          4.6         3.6          1           0.2 setosa        23
+##  5          5.1         3.8          1.6         0.2 setosa        47
+##  6          4.8         3.4          1.9         0.2 setosa        25
+##  7          5           3.5          1.6         0.6 setosa        44
+##  8          5.7         2.6          3.5         1   versicolor    80
+##  9          5.5         2.4          3.8         1.1 versicolor    81
+## 10          5.9         3            5.1         1.8 virginica    150
+## 11          5.8         2.7          5.1         1.9 virginica    143
+## 12          7.4         2.8          6.1         1.9 virginica    131
+## 13          7.6         3            6.6         2.1 virginica    106
+## 14          6.7         3            5.2         2.3 virginica    146
+## 15          6.2         3.4          5.4         2.3 virginica    149
 ```
 

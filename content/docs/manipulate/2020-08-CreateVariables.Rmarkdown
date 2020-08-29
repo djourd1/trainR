@@ -1,0 +1,44 @@
+---
+title: "Create Variables" 
+author: Damien Jourdain
+date: '2020-08-02'
+slug: createvariables
+output: 
+  bookdown::pdf_document2:
+    fig_caption: yes
+    toc: yes
+  bookdown::html_document2:
+    fig_caption: yes
+categories:
+  - R
+tags: []
+type: book
+weight: 5
+---
+
+```{r, echo=FALSE, warning=FALSE,message=FALSE}
+library(readxl)
+library(tidyverse)
+fish <- read_excel("datasets.xlsx")
+fish <- fish %>% slice_head(n=3)
+fish$ID <- 1:nrow(fish)
+```
+
+Surveys provides raw data. Often you will need to combine information collected with different variables into a new variable. So you will need to add new columns that are functions of existing columns. 
+
+`mutate()` adds new columns at the end of the table. 
+
+```{r}
+fish %>% 
+  select(ID, contains("Petal")) %>%
+  mutate(ratioPetals = Petal.Width / Petal.Length)
+```
+
+
+Arithmetic operators can also be very useful. For example, `x / sum(x)` calculates the proportion of a total, and `y - mean(y)` computes the difference from the mean.
+
+```{r}
+fish %>% 
+  select(ID, contains("Petal")) %>%
+  mutate(diffMeansPetalWidth = Petal.Length - mean(Petal.Length) )
+```

@@ -24,19 +24,17 @@ fish$ID <- 1:nrow(fish)
 ```
 
 
-Now that you are familiar with dplyr commands and the pipe syntax, we will continue our possible data manipulations.
+You are now familiar with `dplyr` commands and the pipe syntax.
 
-A second type of manipulation is the ordering of your data. 
+A second type of manipulation is the ordering of your data. For this, we will use the command `arrange()`.
 
-For this, we will use the command `arrange()`.
-
-arrange() changes the order of the rows. The argument is a  set of column names to order by. 
+The command `arrange()` changes the order of the rows. Beside the name of the dataset, the argument is a set of column names to order by. 
 
 ```{r}
 fish %>% arrange(Species)
 ```
 
-If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns.
+If you provide more than one column name, the column names are separated with commas.Each additional column will be used to break ties in the values of preceding columns. 
 
 ```{r}
 fish %>% arrange(Species, Petal.Width)
@@ -51,6 +49,8 @@ fish %>% arrange(desc(Species), Petal.Width)
 Just to get familiar with the pipes, you can take a random sample of size 15 of the fish data set and then order it by the Petal.Width. For equal Petal.Width, order it by Species.
 
 ```{r}
-fish %>% slice_sample(n=15) %>% arrange(Petal.Width, Species)
+fish %>% 
+  slice_sample(n=15) %>%
+  arrange(Petal.Width, Species)
 ```
 
