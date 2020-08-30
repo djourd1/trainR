@@ -1,0 +1,56 @@
+---
+title: "Combining Different Data Sets" 
+author: Damien Jourdain
+date: '2020-05-08'
+slug: merge
+output: 
+  bookdown::pdf_document2:
+    fig_caption: yes
+    toc: yes
+  bookdown::html_document2:
+    fig_caption: yes
+categories:
+  - R
+tags: []
+type: book
+weight: 1
+
+---
+
+# Learning objectives
+
+# The intuition
+
+Let's consider a simple case where you have recorded information about some respondents. You have recorded for each respondent their name and age, and you have assigned them a unique number. The table would look like this:
+
+```{r, echo=FALSE, warning=FALSE}
+library(tidyverse)
+dt1 <- tibble(ID= 1:4, name = c("Joe", "Jack", "Jean", "Peter"), age = c(23,32,45, 42))
+dt1
+```
+
+Now suppose that you have recorded information about the equipment they use, but suppose not all of them use the same number of equipments. 
+
+One solution will be to define a relatively large number of columns to record the equipment they use. This could look like this.
+
+```{r, echo=FALSE, warning=FALSE}
+dt1 <- dt1 %>% mutate(equ1 = c("computer", "car", "computer", "motorcycle"), equ2 = c("car", "computer", "bicycle", NA),
+                      equ3 = c("bicycles", NA, NA, NA), equ4 = c("computer", NA, NA, NA)  )
+dt1
+```
+
+This way of doing is not very efficient and prone to errors. Not very efficient, as many cells are left empty. Prone to errors since you are likely to use characters and make typing mistakes (as in our case between bicycle and bicycles). Finally, it will be very difficult to summarize the information about the number of persons having a computer. (you can give it a try!)
+
+Another, more efficient way, is to create a separate table that will record the type of equipment that are potentially used. 
+
+```{r, echo=FALSE, warning=FALSE}
+tools <- tibble(toolID = 1:4 , tool = c("computer", "motorcycle", "car", "bicycle"))
+tools
+```
+
+And create a new table that will match the persons with the tools. One person will be able to use several tools. 
+
+```{r, echo=FALSE, warning=FALSE}
+
+```
+

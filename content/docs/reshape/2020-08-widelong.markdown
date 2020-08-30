@@ -38,6 +38,8 @@ If you want to reshape your table as a long format, you will shape in order to o
 + one column indicating the actual answer
 + additional columns to describe the respondents
 
+## Use pivot_longer()
+
 To do so, we will use the command `pivot_longer()` that is part of the `tidyr` package (a member of the tidyverse family)
 
 So do not forget to load the tidyverse package:
@@ -172,5 +174,5 @@ pivot_longer(dt, cols=contains("ans"),
 ## 15       5    31 Cape Town 3             1
 ```
 
-Full details about pivot_long can be found at:
+Full details about pivot_long can be found at: <a href="https://tidyr.tidyverse.org/reference/pivot_longer.html" target="_blank">pivot_longer</a>
 

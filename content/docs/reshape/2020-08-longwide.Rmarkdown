@@ -1,0 +1,65 @@
+---
+title: "From long to wide" 
+author: Damien Jourdain
+date: '2020-08-20'
+slug: longtowide
+type: book
+weight: 3
+---
+
+```{r , echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+## The original data
+
+Let's suppose that you capture or obtained data in the following format:
+
++ one line per answer, per respondent
++ one column indicating the actual question that was answered
++ additional columns to describe the respondents
+
+
+```{r, echo=FALSE}
+set.seed(12345)
+N <- 7
+d <- tibble(resp_id=rep(1:N), age = sample(30:50, N, TRUE), 
+                city = sample(c("Pretoria", "Cape Town"), N, TRUE),
+                ans_1=sample(3,N,TRUE),
+                ans_2=sample(3,N,TRUE),
+                ans_3=sample(2,N,TRUE))
+dt <- pivot_longer(d, cols=contains("ans"), 
+             names_prefix = "ans_", names_to = "Question", values_to = "Answer")
+dt
+```
+
+## What do you want to obtain?
+
+If you want to reshape your table as a wide format, you will shape in order to obain
+
++ one line per respondent with three columns corresponding to the answers to the three questions
++ additional columns detailing characteristics of the respondent
+
+
+
+## Use pivot_wider()
+
+To do so, we will use the command `pivot_wider()`. It is part of the `tidyr` package, a member of the tidyverse family, so do not forget to load the tidyverse package:
+
+```{r, eval=FALSE}
+library(tidyverse)
+```
+
+```{r}
+dt %>%
+  pivot_wider(names_from = "Question", values_from = "Answer")
+```
+
+It has create three new columns which names were the unique values of the column Question. Each cell in these columns correspond to the answers of respondents to the three questions. 
+
+```{r}
+dt %>%
+  pivot_wider(names_from = "Question", names_prefix = "quest_", values_from = "Answer")
+```
+
+Full details about pivot_long can be found at: <a href="https://tidyr.tidyverse.org/reference/pivot_wider.html" target="_blank">pivot_wider</a>

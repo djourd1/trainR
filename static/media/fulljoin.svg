@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="80mm"
+   height="50mm"
+   viewBox="0 0 160 100"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="fulljoin.svg">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath891">
+      <ellipse
+         style="fill:#ffaaaa;stroke:#000000;stroke-width:0.264583"
+         id="ellipse893"
+         cx="124.16518"
+         cy="206.75298"
+         rx="44.223213"
+         ry="47.625" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath962">
+      <ellipse
+         ry="47.625"
+         rx="44.223213"
+         cy="164.98662"
+         cx="181.23958"
+         id="ellipse964"
+         style="fill:none;stroke:#000000;stroke-width:0.264583" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.5004828"
+     inkscape:cx="299.09989"
+     inkscape:cy="232.64885"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1358"
+     inkscape:window-y="4"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       id="grid849"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#808000;stroke:#000000;stroke-width:0.264583"
+       id="path852"
+       cx="51.026787"
+       cy="50.6488"
+       rx="44.223213"
+       ry="47.625" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="15.874999"
+       y="45.735115"
+       id="text901"><tspan
+         sodipodi:role="line"
+         id="tspan899"
+         x="15.874999"
+         y="45.735115"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype';stroke-width:0.264583">Table A</tspan></text>
+    <ellipse
+       style="fill:#808000;stroke:#000000;stroke-width:0.264583"
+       id="path852-8-5"
+       cx="106.58927"
+       cy="51.026791"
+       rx="44.223213"
+       ry="47.625" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:palatino-linotype;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="102.05356"
+       y="45.357143"
+       id="text905"><tspan
+         sodipodi:role="line"
+         id="tspan903"
+         x="102.05356"
+         y="45.357143"
+         style="font-size:5.64444px;stroke-width:0.264583">Table B</tspan></text>
+    <ellipse
+       ry="47.625"
+       rx="44.223213"
+       cy="164.60863"
+       cx="125.67709"
+       id="path852-4"
+       style="fill:#808000;stroke:#000000;stroke-width:0.264583"
+       clip-path="url(#clipPath962)"
+       transform="translate(-74.31029,-113.99779)" />
+  </g>
+</svg>

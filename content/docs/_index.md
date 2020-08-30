@@ -5,7 +5,7 @@ type: book  # Do not modify.
 
 Welcome to the training material associated with the University of Pretoria course.
 
-The materials are organized into four chapters. 
+The materials are organized into five chapters. 
 
 After the first chapter, you will have installed the two softwares R and R Studio IDE on your computer. You will be able to run R as a standalone programme, and with the R Studio IDE. You will be able to write a small script and save it on your computer for later use. You will also be able to load some additional packages written by other developers.
 
@@ -15,4 +15,5 @@ After the third chapter, you will be able to manipulate your raw data, in order 
 
 After the fourth chapter, you will understand the concept of wide and long formats and you will be able to change to reshape your data from one format to another.
 
+After the fifth chapter, you will be able to merge information scattered into different but related tables.
 
