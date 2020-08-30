@@ -12,6 +12,8 @@ date: "2020-08-20T00:00:00Z"
 type: book  
 ---
 
+{{< figure library="true" src="getready.jpg" >}}  
+
 This section give the basics to get started with R and R studio.
 
 One important thing you will have to understand is the difference between R and RStudio. R is an open source computer software that will crunch numbers for you. R Studio is a company who developed an Integrated Development Environment (IDE) that will make your life easier when using R. It is called R Studio IDE. To follow this class, you will need to install both R and R Studio. 

@@ -32,6 +32,8 @@ All the other columns correspond to unique characteristics (or answers) of the r
 ## 5       5    31 Cape Town     2     2     1
 ```
 
+
+
 ## Long format
 
 With a long format, each row correspond to one response. So each respondent will have data in multiple rows. 
@@ -65,4 +67,6 @@ Note also variables that don’t change across responses will have the same valu
 
 Depending on data analysis needs, you will have to change from one format to another. Therefore, it is important that you master the functions to reshape data in one format or another. 
 
+## A graphical representation
 
+{{< figure library="true" src="wideLong.svg" >}}

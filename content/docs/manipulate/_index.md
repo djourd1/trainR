@@ -15,7 +15,7 @@ type: book
 In most real-life cases, data is not always ready to use immediately. Most of the time it has missing values, missing variable names, or variables scattered into multiple columns that you will need to synthesize. When this kind of data is presented for analysis, it needs intervention to make it *tidy*. 
 
 Up to now, we have been manipulating vectors, matrix and data.frames by reordering them and subsetting them through indexing and the operator `[ ]`. But once we start more advanced analyses, we will want to manipulate with more efficient tools.
-
+{{< figure library="true" src="OIP.jpg" >}}  
 To manipulate data, you have different options. Among them, 3 environments are popular:
 
 + The original Data.frame
